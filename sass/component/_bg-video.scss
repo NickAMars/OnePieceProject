@@ -17,6 +17,12 @@
     height:100%;
     // simular to background size cover
     object-fit: cover;
+    /*
+        the vide seems to not maintain its height aspect good
+        so it extends out of its frame which would would
+        cover the photos of the top and bottom section,
+        while moving away from its control system
+    */
   }
 }
 .video{

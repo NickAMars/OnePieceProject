@@ -10,3 +10,14 @@ If I want to use a gifs here it is.
 GIPHY is the perfect place:
 https://giphy.com/gifs/one-piece-YWB6Hi29vA3jG
 Might use Coverr
+
+
+
+
+Media querys for info section
+
+Media querys which I will apply to the intro section is the
+movement of its grid.
+So im thinking to make the two sunny summery at the top and pull the image and the video in horizantal format
+if therer is any more propments i might just have to increase the row and
+make a new section for the video and images in the order 1 ,2,3.

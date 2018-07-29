@@ -37,6 +37,9 @@
     &--7{
       grid-column: 1/-1;
       grid-row:  3/5;
+      overflow:hidden;
+      // justify-self: center;
+      // align-content: center;
       // background-color: yellow;
     }
 
