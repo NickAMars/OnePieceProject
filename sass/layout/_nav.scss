@@ -66,6 +66,8 @@
     padding: 1rem;
     font-weight: 700;
     display:block;
+    background-color: rgba($color-primary, .8);
+
   // seperate from each other
     &:not(:last-child){
       margin-right: 1rem;

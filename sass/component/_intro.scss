@@ -1,0 +1,111 @@
+.intro{
+
+  &__container{
+    // background-color: orangered;
+    display: grid;
+    grid-template-columns:  repeat(8, minmax(min-content,1fr));
+    grid-template-rows: repeat(6, 10rem);
+    padding: 3rem;
+    grid-gap: 3rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /*
+    Two of the stories position in the grid
+  */
+  &__storys{
+  align-self: center;
+  justify-self: center;
+    &--1{
+      grid-column: 1/6;
+      grid-row: 1/4;
+      // background-color: pink;
+    }
+    &--2{
+      grid-column: 1/6;
+      grid-row: 4/-1;
+      // background-color: red;
+    }
+  }
+
+  /*
+    the vide position
+  */
+  &__gallary{
+    grid-row: 1/-1;
+    grid-column: 6/-1;
+    background-color: black;
+  }
+
+  &__card{
+    // align-self: center;
+    // background-color: purple;
+    width: 80%;
+     max-height: 25rem;
+    margin: 0 auto;
+    padding: 2rem;
+    grid-gap: 2rem;
+    background-color: rgba(#000, .5);
+
+
+    display: grid;
+    grid-template-rows: min-content max-content;
+    // grid-template-columns: min-content max-content;
+    &--1{
+       transform: skewX(7deg);
+       grid-template-columns: min-content  1fr;
+       & > *{
+         transform: skewX(-7deg);
+       }
+    }
+
+    &--2{
+       transform: skewX(-7deg);
+       grid-template-columns: 1fr min-content;
+       & > *{
+         transform: skewX(7deg);
+       }
+    }
+  }
+  &__image-box{
+    // background-color: pink;
+    align-self: center;
+    justify-self: center;
+    // grid-column: 1/2;
+
+    &--1{
+      grid-column: 1/2;
+      grid-row: 1/-1;
+    }
+    &--2{
+      grid-column: 2/3;
+      grid-row: 1/-1;
+    }
+  }
+  &__image{
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    display:block;
+    object-fit: cover;
+    border: 1px solid #000;
+    // background-size:cover;
+    // width: 100%;
+  }
+  &__title{
+    // background-color: purple;
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__descr{
+    // background-color: red;
+    padding: 2rem;
+    p{
+      color: white;
+      font-style: italic;
+      font-size: 1.4rem;
+    }
+  }
+}

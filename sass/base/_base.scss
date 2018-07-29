@@ -7,6 +7,13 @@ $color-secondary: #0000FF;
 $color-secondary-light:#3232ff;
 $color-secondary-black:#0000cc;
 
+$color-tertiary: #FADA5E;
+$color-tertiary-light: #ffff00;
+$color-tertiary-black: #cccc00;
+
+$color-yellow-green:#9ACD32;
+$color-orange-red: #FF4500;
+
 :root{
 
   --color-primary: #FFA500;
@@ -18,7 +25,9 @@ $color-secondary-black:#0000cc;
 
 }
 
-$phone: 37.5em;//phone
+$bp-medium: 43.75em; // 700px
+$phone: 37.5em;// 600px
+$small-phone: 20.7em;//33px
 /*
 universal reset
 */
