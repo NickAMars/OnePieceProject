@@ -1,0 +1,52 @@
+.heading-primary{
+    color: #fff;
+      // backface-visibility: hidden;
+      text-transform: uppercase;
+    &--main{
+      display: block;
+      font-size: 6rem;
+      // font-weight: 400;
+      letter-spacing: 2.5rem;
+      animation: moveInLeft 1s ease-out;
+
+
+      @include respond(tab-port){
+        font-size: 5rem;
+        letter-spacing: 1.5rem;
+      }
+      @include respond(phone){
+        font-size: 4.5rem;
+        letter-spacing: .5rem;
+      }
+    }
+
+    &--sub{
+         display: block;
+         font-size: 2rem;
+         font-weight: 400;
+         letter-spacing: 1rem;
+         animation: moveInRight 2s ease-out 0.75s;
+         animation-fill-mode: backwards;
+         @include respond(tab-port){
+           //font-size: 5rem;
+           letter-spacing: .4rem;
+         }
+    }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display:inline-block;
+  background-image: linear-gradient(to bottom right, $color-primary-light, $color-secondary-light);
+  //takes away the color form everything except behind the text
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1.2rem;
+
+
+  // position: relative;
+  //transform: rotate(10deg);
+}

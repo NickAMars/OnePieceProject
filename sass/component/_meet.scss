@@ -1,0 +1,183 @@
+.meet{
+  // icon top of the secondary header
+  &__icon-box{
+    position:absolute;
+    top:-100%;
+    right:-2rem;
+    width: 8rem;
+    transform: rotate(30deg);
+  }
+  &__icon{
+    width: 100%;
+  }
+
+
+  &__container{
+    // background-color: pink;
+
+    display: grid;
+
+    //divide the into different sections
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    // space all around
+    grid-gap: 3rem;
+    grid-column-gap: 6rem;
+    grid-row-gap: 12rem;
+    padding: 6rem;
+  }
+
+  &__cards{
+    // background-color: orangered;
+    background-color:  #EEE;
+    box-shadow: 1rem 2rem 4rem rgba(#000, .3);
+    display:grid;
+    grid-template-columns:  repeat(2,1fr);
+    grid-gap:2rem;
+    padding: 2rem;
+    //margin: 2rem;
+  }
+
+  /*
+  &__card-member  -- is the contatiner for the crew mate
+    &__card-image  -- holds the image
+      &__card-name -- h1 tag
+
+  */
+  &__card-member{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+  }
+  &__card-image{
+    //width: 100%;
+    margin-top: -15rem;
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 100%;
+    border: .1px solid #000;
+  }
+  &__card-name{
+    // placement
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: end;
+    // surroundings
+    background-color: rgba(#fff, 0.8);
+    padding: 1.2rem 4rem;
+    // font decuration
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #1ADBFE;
+    z-index: 3;
+  }
+  /*
+  IN THE CARD UNDER THE  IMAGE AND HEADER
+  hold
+  the devil Devil-fruit
+  fighting Type
+  Weaknesst
+  Possition of Crew member
+  */
+  &__devil-fruit{
+    // placement is auto matic
+    display: flex;
+    align-items: center;
+
+    svg {
+      width:3rem;
+      height: 3rem;
+      fill: orangered;
+    }
+    p{
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 1rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+    }
+    // width:4rem;
+  }
+
+  /*
+  The two last feild in the card
+  &__bounty
+  &__trophy
+  */
+
+  &__bounty, &__trophy{
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 /-1;
+    margin-left: -2rem;
+    svg{
+      width:4rem;
+      height:4rem;
+      margin-right:1rem;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  }
+
+
+  &__bounty{
+    svg{fill: red;}
+    p {letter-spacing: .7rem;}
+  }
+
+
+   &__trophy{
+     padding: 2rem;
+     svg{fill: var(--color-primary);}
+     p {
+       letter-spacing: 1rem;
+       font-weight: 900;
+     }
+     p span {
+         display: block;
+         text-align: center;
+           // margin-right:1rem;
+     }
+   }
+
+
+
+/*
+BELLOW MEET THE CREW HEADER
+  &__crew-icon - holds the grid for the item
+  &__description- holds the items bellow the header
+
+*/
+  &__crew-icon{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 3rem;
+  }
+  &__description{
+    display: flex;
+    align-items: center;
+    svg{
+      width: 5rem;
+      height: 5rem;
+      fill: orangered;
+      margin-right: 1.5rem;
+    }
+    p{
+      color: #777;
+      font-size: 1.4rem;
+    }
+  }
+
+
+}
