@@ -469,6 +469,19 @@ BELLOW MEET THE CREW HEADER
     object-fit: cover;
     display: block; }
 
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  padding: 1rem 2rem; }
+  .btn span, .btn:link span, .btn:visited span {
+    border-bottom: 1px solid #fff; }
+
+.btn--1 {
+  position: relative;
+  top: -2rem;
+  left: 5%; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;

@@ -1,0 +1,30 @@
+
+
+.btn {
+
+  &,&:link,&:visited{
+    text-decoration: none;
+    color:white;
+    background-color: orangered;
+    padding: 1rem 2rem;
+    // margin-top: -2rem;
+
+    span{
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+
+
+
+
+
+
+
+  &--1{
+    position: relative;
+    top: -2rem;
+    left:5%;
+  }
+
+}
