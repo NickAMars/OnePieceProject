@@ -21,3 +21,8 @@ movement of its grid.
 So im thinking to make the two sunny summery at the top and pull the image and the video in horizantal format
 if therer is any more propments i might just have to increase the row and
 make a new section for the video and images in the order 1 ,2,3.
+
+
+
+Took three half hours added the media query to the introduction to the sunny.
+Tomorrow i think i am going to work on the footer of the page.

@@ -15,9 +15,25 @@
     //padding: .5rem;
   // background-color:orangered;
     //border-radius: 2rem;
-    color: #fff;
-    width:10rem;
-    height:7rem;
+    // color: #fff;
+    width:9rem;
+    height:9rem;
+    margin-top: 2rem;
+    @include respond(tab-land){
+      width:8rem;
+      height:8rem;
+      // margin-top:2rem;
+    }
+    @include respond(tab-port){
+      width:6rem;
+      height:6rem;
+      // margin-top:2rem;
+    }
+    @include respond(tab-port){
+      width:5rem;
+      height:5rem;
+       margin-top:4rem;
+    }
     //font-size: 2.4rem;
     //font-weight: 900;
   }

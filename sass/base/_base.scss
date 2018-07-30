@@ -27,7 +27,9 @@ $color-orange-red: #FF4500;
 
 $bp-medium: 43.75em; // 700px
 $phone: 37.5em;// 600px
-$small-phone: 20.7em;//33px
+$phone-medium:25em; //400px;
+$small-phone: 20.7em;//330px
+$micro: 15rem;
 /*
 universal reset
 */
@@ -49,6 +51,9 @@ html{
 // this one has priority if condition is met
 @include respond(phone){
     font-size: 40%;   // 1 rem  = 8 px
+}
+@media   only screen and  (max-width: $micro){
+  font-size: 30%;
 }
 }
 

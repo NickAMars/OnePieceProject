@@ -1,6 +1,12 @@
 .gallery{
   grid-row: 1/-1;
   grid-column: 6/-1;
+
+
+  @include respond(tab-land){
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
   // background-color: orangered;
   // &__image-1{
   // }
@@ -8,36 +14,83 @@
   grid-template-columns: repeat(3, minmax(10rem, 1fr));
   grid-template-rows: repeat(6, minmax(10rem, 1fr));
   grid-gap:1rem;
+  @include respond(tab-land){
+    grid-template-columns: repeat(8, minmax(min-content,1fr));
+    grid-template-rows: repeat(6, minmax(10rem, 1fr));
+  }
+  @include respond(tab-port){
+    grid-template-columns: repeat(8, minmax(min-content,1fr));
+    grid-template-rows: repeat(6, minmax(5vw, 1fr));
+  }
+
+  @include respond(phone){
+    display: none;
+  }
   &__item{
     &--1{
       grid-column: 1/2;
       grid-row:  1/2;
+      // @include respond(tab-land){
+      //   //display:none
+      //   grid-column: 1/2;
+      //   grid-row: 3/4;
+      // }
+      @include respond(tab-port){
+        display:none;
+      }
     }
     &--2{
       grid-column: 2/3;
         grid-row:  1/2;
+        @include respond(tab-land){
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+        @include respond(tab-port){
+          display:none;
+        }
     }
     &--3{
       grid-column: 3/4;
         grid-row:  1/2;
+        @include respond(tab-land){
+          grid-column: 1/2;
+          grid-row: 3/4;
+        }
     }
     &--4{
       grid-column: 1/2;
         grid-row:  2/3;
+        @include respond(tab-land){
+          grid-column: 1/2;
+          grid-row: 4/5;
+        }
     }
     &--5{
       grid-column: 2/3;
       grid-row:  2/3;
+      @include respond(tab-land){
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
     }
     &--6{
       grid-column: 3/4;
       grid-row:  2/3;
+      @include respond(tab-land){
+        grid-column: 2/3;
+        grid-row: 4/5;
+      }
     }
 
     &--7{
       grid-column: 1/-1;
       grid-row:  3/5;
       overflow:hidden;
+      @include respond(tab-land){
+        grid-column: 3/6;
+        grid-row: 3/5;
+      }
       // justify-self: center;
       // align-content: center;
       // background-color: yellow;
@@ -47,26 +100,68 @@
     &--8{
       grid-column: 1/2;
       grid-row:  5/6;
+      @include respond(tab-land){
+        grid-column: 6/7;
+        grid-row: 3/4;
+      }
     }
     &--9{
       grid-column: 2/3;
       grid-row:  5/6;
+      @include respond(tab-land){
+        grid-column: 6/7;
+        grid-row: 4/5;
+      }
     }
     &--10{
       grid-column: 3/4;
       grid-row:  5/6;
+      @include respond(tab-land){
+        grid-column: 7/8;
+        grid-row: 3/4;
+      }
+
+      // @include respond(tab-port){
+      //   display:none;
+      // }
     }
     &--11{
       grid-column: 1/2;
       grid-row:  6/7;
+      @include respond(tab-land){
+        grid-column: 7/8;
+        grid-row: 4/5;
+      }
+
+      // @include respond(tab-port){
+      //   display:none;
+      // }
     }
     &--12{
       grid-column: 2/3;
       grid-row:  6/7;
+      @include respond(tab-land){
+        grid-column: 7/8;
+        grid-row: 5/6;
+        // display:none;
+        @include respond(tab-port){
+          grid-column: 8/9;
+          grid-row: 3/4;
+        }
+      }
     }
     &--13{
       grid-column: 3/4;
       grid-row:  6/7;
+      @include respond(tab-land){
+        grid-column: 7/8;
+        grid-row: 6/7;
+        // display:none;
+      }
+      @include respond(tab-port){
+        grid-column: 8/9;
+        grid-row: 4/5;
+      }
     }
   }
   &__img{
