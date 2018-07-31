@@ -60,8 +60,10 @@
 
   &__copyright{
      border-top: 1px solid #DDD;
-    // padding:2rem;
-
+      // padding:2rem;
+      width: 40%;
+      display:flex;
+      justify-content:  flex-end;
   }
   &__paragraph{
     padding:2rem;

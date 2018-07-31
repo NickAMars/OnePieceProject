@@ -861,7 +861,10 @@ BELLOW MEET THE CREW HEADER
     padding: .5rem 1rem; }
 
 .footer__copyright {
-  border-top: 1px solid #DDD; }
+  border-top: 1px solid #DDD;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end; }
 
 .footer__paragraph {
   padding: 2rem;
