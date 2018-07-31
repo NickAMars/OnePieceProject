@@ -12,7 +12,7 @@
   crossorigin="anonymous"></script>
   <title> Nicholaus Marsden </title>
 </head>
-
+<!-- svg now can use[href] instead of use[xlink:href] but may not be supported for all browsers-->
 <body>
   <nav class="nav">
     <div class="nav__logo-box"><a class="nav__logo-link" href="#"><img class="nav__logo" type="image/png" src="img/logo.png" alt="One Piece"></a></div>
@@ -44,7 +44,7 @@
         </svg>
     </a>
   </header>
-
+<main>
   <section class="meet" id="meet">
     <div class="center-text mb-md">
             <h2 class="heading-secondary rt-position">
@@ -536,93 +536,124 @@
           </div>
   </section>
 
-<section class="intro" id="Intro">
+  <section class="intro" id="Intro">
 
-  <div class="bg-video">
-    <video class="bg-video__content" autoplay muted loop>
-        <source src="img/birds.mp4" type="video/mp4">
-        <source src="img/birds.webm" type="video/webm">
-        Your browser is not supported!
-    </video>
-  </div>
-
-
-  <div class="center-text ">
-          <h2 class="heading-secondary mt-md ">
-            Introducing the Sunny
-          </h2>
-  </div>
-
-  <div class="intro__container">
-
-     <!-- seperate into two section one for the story and the other for the video -->
-    <div class="intro__storys intro__storys--1">
-      <div class="intro__card intro__card--1">
-
-        <div class="intro__image-box intro__image-box--1">
-          <img class="intro__image" src="img/sunny-face.jpg" alt="Sunny-face">
-        </div>
-        <div class="intro__title">
-          <h3 class="heading-tertiary">The Thousand Sunny</h3>
-        </div>
-
-        <div class="intro__descr">
-
-          <p>  ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptatem, laudantium, accusantium minima tempore est. Dicta doloribus ipsum, nemo ratione suscipit dolor optio sed nostrum! ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-
-      </div>
+    <div class="bg-video">
+      <video class="bg-video__content" autoplay muted loop>
+          <source src="img/birds.mp4" type="video/mp4">
+          <source src="img/birds.webm" type="video/webm">
+          Your browser is not supported!
+      </video>
     </div>
 
-    <div class="intro__storys intro__storys--2">
-      <div class="intro__card intro__card--2">
 
-       <div class="intro__image-box intro__image-box--2">
-          <img class="intro__image" src="img/sunny-side.jpg" alt="Sunny-side">
-       </div>
-          <div class="intro__title">
-          <h3 class="heading-tertiary"> Docking System</h3>
-        </div>
-
-        <div class="intro__descr">
-
-          <p>  ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptatem, laudantium, accusantium minima tempore est. Dicta doloribus ipsum, nemo ratione suscipit dolor optio sed nostrum! ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-
-      </div>
+    <div class="center-text ">
+            <h2 class="heading-secondary mt-md ">
+              Introducing the Sunny
+            </h2>
     </div>
-    <!-- video -->
-     <div class="gallery">
-        <div class="gallery__item--1"><img src="img/sunny_1.jpg" alt="sunny_1" class="gallery__img"></div>
-       <div class="gallery__item--2"><img src="img/sunny_2.jpg" alt="sunny_2" class="gallery__img"></div>
-      <div class="gallery__item--3"><img src="img/sunny_3.jpg" alt="sunny_3" class="gallery__img"></div>
-     <div class="gallery__item--4"><img src="img/sunny_4.jpg" alt="sunny_4" class="gallery__img"></div>
-       <div class="gallery__item--5"><img src="img/sunny_5.jpg" alt="sunny_5" class="gallery__img"></div>
-       <div class="gallery__item--6"><img src="img/sunny_6.jpg" alt="sunny_6" class="gallery__img"></div>
 
-        <div class="gallery__item--7">
-          <div class="video">
-            <video class=" gallery__item--7 video__content" controls>
-                <source src="img/sunny_video.mp4" type="video/mp4">
-                Your browser is not supported!
-            </video>
+    <div class="intro__container">
+
+       <!-- seperate into two section one for the story and the other for the video -->
+      <div class="intro__storys intro__storys--1">
+        <div class="intro__card intro__card--1">
+
+          <div class="intro__image-box intro__image-box--1">
+            <img class="intro__image" src="img/sunny-face.jpg" alt="Sunny-face">
           </div>
+          <div class="intro__title">
+            <h3 class="heading-tertiary">The Thousand Sunny</h3>
+          </div>
+
+          <div class="intro__descr">
+
+            <p>  ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptatem, laudantium, accusantium minima tempore est. Dicta doloribus ipsum, nemo ratione suscipit dolor optio sed nostrum! ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
         </div>
+      </div>
 
-        <div class="gallery__item--8"><img src="img/dock_1.jpg" alt="dock_1" class="gallery__img"></div>
-        <div class="gallery__item--9"><img src="img/dock_2.jpg" alt="dock_2" class="gallery__img"></div>
-        <div class="gallery__item--10"><img src="img/dock_3.jpg" alt="dock_3" class="gallery__img"></div>
-        <div class="gallery__item--11"><img src="img/dock_4.jpg" alt="dock_4" class="gallery__img"></div>
-        <div class="gallery__item--12"><img src="img/dock_5.jpg" alt="dock_5" class="gallery__img"></div>
-        <div class="gallery__item--13"><img src="img/sunny_cannon.jpg" alt="cannon" class="gallery__img"></div>
+      <div class="intro__storys intro__storys--2">
+        <div class="intro__card intro__card--2">
 
-     </div>
+         <div class="intro__image-box intro__image-box--2">
+            <img class="intro__image" src="img/sunny-side.jpg" alt="Sunny-side">
+         </div>
+            <div class="intro__title">
+            <h3 class="heading-tertiary"> Docking System</h3>
+          </div>
 
-  </div>
-  <a href="http://ww15.watchop.io/" target="_blank" class="btn btn--1"><span>Learn more  &rarr;</span> </a>
-</section>
+          <div class="intro__descr">
+
+            <p>  ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptatem, laudantium, accusantium minima tempore est. Dicta doloribus ipsum, nemo ratione suscipit dolor optio sed nostrum! ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!-- video -->
+       <div class="gallery">
+          <div class="gallery__item--1"><img src="img/sunny_1.jpg" alt="sunny_1" class="gallery__img"></div>
+         <div class="gallery__item--2"><img src="img/sunny_2.jpg" alt="sunny_2" class="gallery__img"></div>
+        <div class="gallery__item--3"><img src="img/sunny_3.jpg" alt="sunny_3" class="gallery__img"></div>
+       <div class="gallery__item--4"><img src="img/sunny_4.jpg" alt="sunny_4" class="gallery__img"></div>
+         <div class="gallery__item--5"><img src="img/sunny_5.jpg" alt="sunny_5" class="gallery__img"></div>
+         <div class="gallery__item--6"><img src="img/sunny_6.jpg" alt="sunny_6" class="gallery__img"></div>
+
+          <div class="gallery__item--7">
+            <div class="video">
+              <video class=" gallery__item--7 video__content" controls>
+                  <source src="img/sunny_video.mp4" type="video/mp4">
+                  Your browser is not supported!
+              </video>
+            </div>
+          </div>
+
+          <div class="gallery__item--8"><img src="img/dock_1.jpg" alt="dock_1" class="gallery__img"></div>
+          <div class="gallery__item--9"><img src="img/dock_2.jpg" alt="dock_2" class="gallery__img"></div>
+          <div class="gallery__item--10"><img src="img/dock_3.jpg" alt="dock_3" class="gallery__img"></div>
+          <div class="gallery__item--11"><img src="img/dock_4.jpg" alt="dock_4" class="gallery__img"></div>
+          <div class="gallery__item--12"><img src="img/dock_5.jpg" alt="dock_5" class="gallery__img"></div>
+          <div class="gallery__item--13"><img src="img/sunny_cannon.jpg" alt="cannon" class="gallery__img"></div>
+
+       </div>
+    </div>
+    <a href="http://ww15.watchop.io/" target="_blank" class="btn btn--1"><span>Learn more  &rarr;</span> </a>
+  </section>
+</main>
+
+<footer class="footer" id="footer">
+            <!-- <div class="footer__logo-box">
+
+              <picture class="footer__logo">
+                <source srcset="img/turtleRock-small.png 1x, img/turtleRock.png 2x" media="(max-width:37.5em)">
+                <img  srcset="img/turtleRock-small.png 1x, img/turtleRock.png 2x" alt="Full logo" class="footer__logo">
+              </picture>
+            </div> -->
+
+              <div class="footer__container">
+
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                      <li class="footer__item"><a href="" class="footer__link">Company</a></li>
+
+                      <li class="footer__item"><a href="" class="footer__link">Episode</a></li>
+                      <li class="footer__item"><a href="" class="footer__link">Movie</a></li>
+
+                      <li class="footer__item"><a href="" class="footer__link">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__copyright">
+                  <p class="footer__paragraph">
+                    Built by <a href="#" class="footer__link ml-sm"> NAM </a>.
+                  </p>
+                </div>
+
+            </div>
+</footer>
 
   <script type="text/javascript" src="effects.js"></script>
 </body>

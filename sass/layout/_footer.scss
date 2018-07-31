@@ -1,0 +1,70 @@
+.footer{
+  &__container{
+    padding: 5rem;
+    // margin-bottom: 10rem;
+    background-color: #eee;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+  }
+  &__navigation{
+    border-top: 1px solid #DDD;
+    padding:2rem;
+    display: inline-block;
+  }
+
+  &__list{
+    font-size: 1.4rem;
+    font-weight: 400;
+    list-style: none;
+    display: flex;
+  }
+
+  &__item{
+     display: inline-block;
+    &:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+  &__link{
+
+    color: #fff;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #000;
+
+
+    &:link,
+    &:visited{
+      color: #777;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 1s;
+      box-shadow: 0 .1rem .2rem rgba(#eee, .1);
+
+      //doing this gives its its needed effect
+      transform-origin: center;
+      display: inline-block;
+    }
+
+    &:hover{
+      box-shadow: 0 1rem 2rem rgba(#000, .4);
+      transform: rotate(5deg) scaleY(1.2);
+      //background-color: red;
+      background-color: inherit;
+      padding: .5rem 1rem;
+    }
+  }
+
+  &__copyright{
+     border-top: 1px solid #DDD;
+    // padding:2rem;
+
+  }
+  &__paragraph{
+    padding:2rem;
+    font-size: 1rem;
+  }
+}

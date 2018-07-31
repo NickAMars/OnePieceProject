@@ -818,6 +818,55 @@ BELLOW MEET THE CREW HEADER
     .header__arrow-icon:hover {
       transform: skew(-45deg) translateX(-20%); }
 
+.footer__container {
+  padding: 5rem;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.footer__navigation {
+  border-top: 1px solid #DDD;
+  padding: 2rem;
+  display: inline-block; }
+
+.footer__list {
+  font-size: 1.4rem;
+  font-weight: 400;
+  list-style: none;
+  display: flex; }
+
+.footer__item {
+  display: inline-block; }
+  .footer__item:not(:last-child) {
+    margin-right: 2rem; }
+
+.footer__link {
+  color: #fff;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000; }
+  .footer__link:link, .footer__link:visited {
+    color: #777;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 1s;
+    box-shadow: 0 0.1rem 0.2rem rgba(238, 238, 238, 0.1);
+    transform-origin: center;
+    display: inline-block; }
+  .footer__link:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scaleY(1.2);
+    background-color: inherit;
+    padding: .5rem 1rem; }
+
+.footer__copyright {
+  border-top: 1px solid #DDD; }
+
+.footer__paragraph {
+  padding: 2rem;
+  font-size: 1rem; }
+
 .meet {
   background-color: rgba(238, 238, 238, 0.8);
   padding: 10rem 0; }
