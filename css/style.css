@@ -791,11 +791,14 @@ BELLOW MEET THE CREW HEADER
 .header {
   height: 100vh;
   backface-visibility: hidden;
-  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One-sm.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 50%;
   position: relative; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One.jpg); } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -857,8 +860,7 @@ BELLOW MEET THE CREW HEADER
   .footer__link:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(5deg) scaleY(1.2);
-    background-color: inherit;
-    padding: .5rem 1rem; }
+    background-color: inherit; }
 
 .footer__copyright {
   border-top: 1px solid #DDD;

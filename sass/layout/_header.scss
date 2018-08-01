@@ -9,12 +9,21 @@
    to right bottom,
    rgba($color-primary-light,.4),
    rgba($color-primary-black,.4))
-   , url(../img/One.jpg);
+   , url(../img/One-sm.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 20% 50%;
    position: relative;
 
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+          only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em){
+            background-image:
+             linear-gradient(
+             to right bottom,
+             rgba($color-primary-light,.4),
+             rgba($color-primary-black,.4))
+             , url(../img/One.jpg);
+          }
    &__text-box{
      // background-color: #fff;
      //width: 40%;
