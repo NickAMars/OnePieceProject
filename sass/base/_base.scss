@@ -52,6 +52,10 @@ html{
 @include respond(phone){
     font-size: 40%;   // 1 rem  = 8 px
 }
+@media   only screen and  (max-width: $small-phone){
+  font-size: 35%; //5.6px
+}
+
 @media   only screen and  (max-width: $micro){
   font-size: 30%;
 }

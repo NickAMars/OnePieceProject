@@ -71,7 +71,7 @@
         display: block;
        //background-color: yellowgreen;
        position: absolute;
-       bottom: -100%;
+       bottom: -50%;
        right:3rem;
        //margin-top:5rem;
       // margin-left: 5rem;
@@ -83,13 +83,14 @@
     font-weight: 700;
     display:block;
     background-color: rgba($color-primary, .8);
+    border-radius: 2px;
 
   // seperate from each other
     &:not(:last-child){
       margin-right: 1rem;
       @include respond(phone){
           margin-right: 0;
-          margin-bottom: 1rem;
+          // margin-bottom: .4rem;
       }
     }
     position:relative;
@@ -97,9 +98,7 @@
 
 // works when there is no hover
       @media  only screen and (hover:none), only screen and  (max-width: $phone) {
-        //opacity: .8;
         background-color: yellowgreen;
-        //transform: rotateX(100%);
       }
 
 
@@ -108,6 +107,9 @@
     opacity: .8;
     background-color: yellowgreen;
     transform: translateY(15%);
+    @media  only screen and (hover:none), only screen and  (max-width: $phone) {
+      transform: translateY(0);
+    }
   }
 
   &__item:before{
