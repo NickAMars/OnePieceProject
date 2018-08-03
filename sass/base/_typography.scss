@@ -5,7 +5,7 @@
     &--main{
       display: block;
       font-size: 6rem;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: 2.5rem;
       animation: moveInLeft 1s ease-out;
       @include respond(tab-land){
@@ -46,7 +46,7 @@
          @include respond(phone){
            // font-size: 4.5rem;
            letter-spacing: 0;
-               font-weight: 900;
+               font-weight: 400;
          }
 
     }
@@ -63,6 +63,10 @@
   color: transparent;
   letter-spacing: 1.2rem;
 
+  @include respond(tab-port){
+  // font-size: 1.5rem;
+  letter-spacing: 0;
+  }
   // @include respond(phone){
   // font-size: 2.5rem;
   // }
@@ -80,6 +84,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    @include respond(tab-port){
+    // font-size: 1.5rem;
+    letter-spacing: .2rem;
+    }
 
     @include respond(phone){
     font-size: 1.5rem;

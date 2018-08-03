@@ -82,11 +82,15 @@ padding: 3rem;
     // align-self: center;
     // background-color: purple;
     width: 80%;
-     max-height: 25rem;
+    max-height: 25rem;
     margin: 0 auto;
     padding: 2rem;
     grid-gap: 2rem;
     background-color: rgba(#000, .5);
+    @include respond(tab-port){
+    padding: .5rem;
+    max-height: 21rem;
+    }
 
     @media   only screen and  (max-width: $micro){
       padding: 0;

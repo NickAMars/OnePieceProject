@@ -105,7 +105,7 @@
     // font decuration
     font-size: 2rem;
     letter-spacing: 1.4rem;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
     color: #1ADBFE;
@@ -168,7 +168,7 @@
     }
     p {
       font-size: 1.3rem;
-      font-weight: 700;
+      font-weight: 400;
     }
   }
 
@@ -191,7 +191,7 @@
      svg{fill: var(--color-primary);}
      p {
        letter-spacing: 1rem;
-       font-weight: 900;
+       font-weight: 700;
        @media   only screen and  (max-width: $small-phone){
         letter-spacing: 0;
        }
