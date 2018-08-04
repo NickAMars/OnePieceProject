@@ -3,6 +3,7 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
+@import "base/animation";
 
 @import "component/meet";
 @import "component/video";
@@ -11,8 +12,8 @@
 @import "component/button";
 
 
-@import "base/animation";
 @import "layout/nav";
+@import "layout/nav-next";
 @import "layout/header";
 @import "layout/footer";
 

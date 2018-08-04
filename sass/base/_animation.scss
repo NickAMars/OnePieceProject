@@ -56,3 +56,31 @@
     box-shadow: none;
   }
 }
+
+
+/*for the next section navigation part*/
+
+@keyframes nextNavFull-1{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-42%);
+    }
+}
+@keyframes nextNavFull-2{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-22%);
+    }
+}
+@keyframes nextNavFull-3{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-16%);
+    }
+}
