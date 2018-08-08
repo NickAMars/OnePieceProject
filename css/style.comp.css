@@ -25,9 +25,15 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 40%; } }
+  @media only screen and (max-width: 20.7em) {
+    html {
+      font-size: 35%; } }
+  @media only screen and (max-width: 15rem) {
+    html {
+      font-size: 30%; } }
 
 body {
-  font-family: sans-serif; }
+  font-family: 'Merienda', cursive; }
 
 ::selection {
   color: #000;
@@ -43,16 +49,21 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 6rem;
+    font-weight: 700;
     letter-spacing: 2.5rem;
     animation: moveInLeft 1s ease-out; }
+    @media only screen and (max-width: 75em) {
+      .heading-primary--main {
+        letter-spacing: 1.5rem; } }
     @media only screen and (max-width: 56.25em) {
       .heading-primary--main {
-        font-size: 5rem;
-        letter-spacing: 1.5rem; } }
+        font-size: 5.5rem;
+        letter-spacing: 1rem;
+        margin-bottom: 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         font-size: 4.5rem;
-        letter-spacing: .5rem; } }
+        letter-spacing: 0; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -62,7 +73,11 @@ body {
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 56.25em) {
       .heading-primary--sub {
-        letter-spacing: .4rem; } }
+        letter-spacing: .5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0;
+        font-weight: 400; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -74,6 +89,27 @@ body {
   background-clip: text;
   color: transparent;
   letter-spacing: 1.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      letter-spacing: 0; } }
+
+.heading-tertiary {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: .6rem;
+  background-image: linear-gradient(to bottom right, #FADA5E, #FF4500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-tertiary {
+      letter-spacing: .2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 1.5rem;
+      letter-spacing: 0; } }
 
 .center-text {
   text-align: center; }
@@ -132,138 +168,8 @@ body {
 .ml-hg {
   margin-left: 10rem; }
 
-.meet {
-  /*
-  &__card-member  -- is the contatiner for the crew mate
-    &__card-image  -- holds the image
-      &__card-name -- h1 tag
-
-  */
-  /*
-  IN THE CARD UNDER THE  IMAGE AND HEADER
-  hold
-  the devil Devil-fruit
-  fighting Type
-  Weaknesst
-  Possition of Crew member
-  */
-  /*
-  The two last feild in the card
-  &__bounty
-  &__trophy
-  */
-  /*
-BELLOW MEET THE CREW HEADER
-  &__crew-icon - holds the grid for the item
-  &__description- holds the items bellow the header
-
-*/ }
-  .meet__icon-box {
-    position: absolute;
-    top: -100%;
-    right: -2rem;
-    width: 8rem;
-    transform: rotate(30deg); }
-  .meet__icon {
-    width: 100%; }
-  .meet__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 3rem;
-    grid-column-gap: 6rem;
-    grid-row-gap: 12rem;
-    padding: 6rem; }
-  .meet__cards {
-    background-color: #EEE;
-    box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.3);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    padding: 2rem; }
-  .meet__card-member {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    justify-self: center;
-    align-self: center;
-    z-index: 2; }
-  .meet__card-image {
-    margin-top: -15rem;
-    width: 25rem;
-    height: 25rem;
-    object-fit: cover;
-    display: block;
-    border-radius: 100%;
-    border: .1px solid #000; }
-  .meet__card-name {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    justify-self: center;
-    align-self: end;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1.2rem 4rem;
-    font-size: 2rem;
-    letter-spacing: 1.4rem;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    color: #1ADBFE;
-    z-index: 3; }
-  .meet__devil-fruit {
-    display: flex;
-    align-items: center; }
-    .meet__devil-fruit svg {
-      width: 3rem;
-      height: 3rem;
-      fill: orangered; }
-    .meet__devil-fruit p {
-      font-size: 1rem;
-      font-weight: 400;
-      margin-left: 1rem;
-      letter-spacing: .2rem;
-      text-transform: uppercase; }
-  .meet__bounty, .meet__trophy {
-    display: flex;
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1 /-1;
-    margin-left: -2rem; }
-    .meet__bounty svg, .meet__trophy svg {
-      width: 4rem;
-      height: 4rem;
-      margin-right: 1rem; }
-    .meet__bounty p, .meet__trophy p {
-      font-size: 1.3rem;
-      font-weight: 700; }
-  .meet__bounty svg {
-    fill: red; }
-  .meet__bounty p {
-    letter-spacing: .7rem; }
-  .meet__trophy {
-    padding: 2rem; }
-    .meet__trophy svg {
-      fill: var(--color-primary); }
-    .meet__trophy p {
-      letter-spacing: 1rem;
-      font-weight: 900; }
-    .meet__trophy p span {
-      display: block;
-      text-align: center; }
-  .meet__crew-icon {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    padding: 3rem; }
-  .meet__description {
-    display: flex;
-    align-items: center; }
-    .meet__description svg {
-      width: 5rem;
-      height: 5rem;
-      fill: orangered;
-      margin-right: 1.5rem; }
-    .meet__description p {
-      color: #777;
-      font-size: 1.4rem; }
+.border-bt {
+  border-bottom: 1px solid #fff; }
 
 @keyframes moveInLeft {
   0% {
@@ -304,24 +210,547 @@ BELLOW MEET THE CREW HEADER
     transform: scale(1);
     box-shadow: none; } }
 
+/*for the next section navigation part*/
+@keyframes nextNavFull-1 {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-42%); } }
+
+@keyframes nextNavFull-2 {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-22%); } }
+
+@keyframes nextNavFull-3 {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-16%); } }
+
+.meet {
+  /*
+&__icon-box holds the HAT IMAGE
+&__icon- is the HAT
+
+  */
+  /*
+  &__card-member  -- is the contatiner for the crew mate image
+    &__card-image  -- holds the image
+      &__card-name -- h1 tag
+
+  */
+  /*
+  IN THE CARD UNDER THE  IMAGE AND HEADER
+  hold
+  the devil Devil-fruit
+  fighting Type
+  Weaknesst
+  Possition of Crew member
+  */
+  /*
+  The two last feild in the card
+  &__bounty
+  &__trophy
+  */
+  /*
+BELLOW MEET THE CREW HEADER
+  &__crew-icon - holds the grid for the item
+  &__description- holds the items bellow the header
+
+*/ }
+  .meet__icon-box {
+    position: absolute;
+    top: -100%;
+    right: -2rem;
+    width: 8rem;
+    transform: rotate(30deg); }
+    @media only screen and (max-width: 20.7em) {
+      .meet__icon-box {
+        top: -130%;
+        right: 50%;
+        transform: rotate(0deg); } }
+  .meet__icon {
+    width: 100%; }
+  .meet__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-column-gap: 6rem;
+    grid-row-gap: 12rem;
+    padding: 6rem; }
+    @media only screen and (max-width: 43.75em) {
+      .meet__container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+    @media only screen and (max-width: 20.7em) {
+      .meet__container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
+  .meet__cards {
+    background-color: #EEE;
+    box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__cards {
+        display: flex;
+        flex-direction: column; } }
+  .meet__card-member {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    z-index: 2; }
+  .meet__card-image {
+    margin-top: -15rem;
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 100%;
+    border: .1px solid #000; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__card-image {
+        width: 15rem;
+        height: 15rem; } }
+  .meet__card-name {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: end;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.2rem 4rem;
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #1ADBFE;
+    z-index: 3; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__card-name {
+        font-size: 1.6rem;
+        letter-spacing: 0; } }
+  .meet__devil-fruit {
+    display: flex;
+    align-items: center; }
+    .meet__devil-fruit svg {
+      width: 3rem;
+      height: 3rem;
+      fill: orangered; }
+    .meet__devil-fruit p {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 1rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase; }
+  .meet__bounty, .meet__trophy {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 /-1;
+    margin-left: -2rem; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__bounty, .meet__trophy {
+        justify-content: start; } }
+    .meet__bounty svg, .meet__trophy svg {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1rem; }
+    .meet__bounty p, .meet__trophy p {
+      font-size: 1.3rem;
+      font-weight: 400; }
+  .meet__bounty svg {
+    fill: red; }
+  .meet__bounty p {
+    letter-spacing: .7rem; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__bounty p {
+        letter-spacing: 0; } }
+  .meet__trophy {
+    padding: 2rem; }
+    @media only screen and (max-width: 20.7em) {
+      .meet__trophy {
+        padding: 0; } }
+    .meet__trophy svg {
+      fill: var(--color-primary); }
+    .meet__trophy p {
+      letter-spacing: 1rem;
+      font-weight: 700; }
+      @media only screen and (max-width: 20.7em) {
+        .meet__trophy p {
+          letter-spacing: 0; } }
+    .meet__trophy p span {
+      display: block;
+      text-align: center; }
+  .meet__crew-icon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 3rem; }
+  .meet__description {
+    display: flex;
+    align-items: center; }
+    .meet__description svg {
+      width: 5rem;
+      height: 5rem;
+      fill: orangered;
+      margin-right: 1.5rem; }
+    .meet__description p {
+      color: #777;
+      font-size: 1.4rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .3;
+  overflow: hidden; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*
+        the vide seems to not maintain its height aspect good
+        so it extends out of its frame which would would
+        cover the photos of the top and bottom section,
+        while moving away from its control system
+    */ }
+
+.video {
+  height: 100%;
+  width: 100%; }
+  .video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.intro {
+  padding: 3rem;
+  /*
+    Two of the stories position in the grid
+  */
+  /*
+    the vide position
+  */ }
+  .intro__container {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(min-content, 1fr));
+    grid-template-rows: repeat(6, 10vw);
+    padding: 3rem;
+    grid-gap: 3rem;
+    justify-content: center;
+    align-content: center; }
+    @media only screen and (max-width: 15rem) {
+      .intro__container {
+        grid-template-rows: repeat(6, 10rem); } }
+  .intro__storys {
+    align-self: center;
+    justify-self: center; }
+    @media only screen and (max-width: 25em) {
+      .intro__storys {
+        justify-self: stretch; } }
+    .intro__storys--1 {
+      grid-column: 1/6;
+      grid-row: 1/4; }
+      @media only screen and (max-width: 75em) {
+        .intro__storys--1 {
+          grid-column: 2/-1;
+          grid-row: 1/3;
+          align-self: center; } }
+      @media only screen and (max-width: 56.25em) {
+        .intro__storys--1 {
+          grid-column: 1/-1; } }
+      @media only screen and (max-width: 37.5em) {
+        .intro__storys--1 {
+          grid-row: 1/4; } }
+    .intro__storys--2 {
+      grid-column: 1/6;
+      grid-row: 4/-1; }
+      @media only screen and (max-width: 75em) {
+        .intro__storys--2 {
+          grid-column: 1/7;
+          grid-row: 5/-1; } }
+      @media only screen and (max-width: 56.25em) {
+        .intro__storys--2 {
+          grid-column: 1/-1; } }
+      @media only screen and (max-width: 37.5em) {
+        .intro__storys--2 {
+          grid-row: 4/-1; } }
+  .intro__card {
+    width: 80%;
+    max-height: 25rem;
+    margin: 0 auto;
+    padding: 2rem;
+    grid-gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-rows: min-content max-content;
+    box-shadow: 2rem 4rem 8rem rgba(0, 0, 0, 0.05);
+    border: .2px solid #fff; }
+    @media only screen and (max-width: 56.25em) {
+      .intro__card {
+        padding: .5rem;
+        max-height: 21rem; } }
+    @media only screen and (max-width: 15rem) {
+      .intro__card {
+        padding: 0;
+        max-width: 20rem; } }
+    .intro__card--1 {
+      transform: skewX(7deg);
+      grid-template-columns: min-content  1fr; }
+      @media only screen and (max-width: 25em) {
+        .intro__card--1 {
+          grid-template-columns: 1fr; } }
+      .intro__card--1 > * {
+        transform: skewX(-7deg); }
+    .intro__card--2 {
+      transform: skewX(-7deg);
+      grid-template-columns: 1fr min-content; }
+      @media only screen and (max-width: 25em) {
+        .intro__card--2 {
+          grid-template-columns: 1fr; } }
+      .intro__card--2 > * {
+        transform: skewX(7deg); }
+  .intro__image-box {
+    align-self: center;
+    justify-self: center; }
+    .intro__image-box--1 {
+      grid-column: 1/2;
+      grid-row: 1/-1; }
+      @media only screen and (max-width: 25em) {
+        .intro__image-box--1 {
+          display: none; } }
+    .intro__image-box--2 {
+      grid-column: 2/3;
+      grid-row: 1/-1; }
+      @media only screen and (max-width: 25em) {
+        .intro__image-box--2 {
+          display: none; } }
+  .intro__image {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #000; }
+    @media only screen and (max-width: 56.25em) {
+      .intro__image {
+        width: 15rem;
+        height: 15rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .intro__image {
+        width: 12rem;
+        height: 12rem; } }
+  .intro__title {
+    align-self: center;
+    justify-self: center; }
+  .intro__descr {
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+    padding: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .intro__descr {
+        margin-top: 0; } }
+    .intro__descr p {
+      color: white;
+      font-style: italic;
+      font-size: 1.4rem;
+      text-align: justify; }
+      @media only screen and (max-width: 37.5em) {
+        .intro__descr p {
+          font-size: 1rem; } }
+
+.gallery {
+  grid-row: 1/-1;
+  grid-column: 6/-1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  grid-template-rows: repeat(6, minmax(10rem, 1fr));
+  grid-gap: 1rem; }
+  @media only screen and (max-width: 75em) {
+    .gallery {
+      grid-column: 1/-1;
+      grid-row: 1/-1; } }
+  @media only screen and (max-width: 75em) {
+    .gallery {
+      grid-template-columns: repeat(8, minmax(min-content, 1fr));
+      grid-template-rows: repeat(6, minmax(10rem, 1fr)); } }
+  @media only screen and (max-width: 56.25em) {
+    .gallery {
+      grid-template-columns: repeat(8, minmax(min-content, 1fr));
+      grid-template-rows: repeat(6, minmax(5vw, 1fr)); } }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      display: none; } }
+  .gallery__item--1 {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__item--1 {
+        display: none; } }
+  .gallery__item--2 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--2 {
+        grid-column: 1/2;
+        grid-row: 2/3; } }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__item--2 {
+        display: none; } }
+  .gallery__item--3 {
+    grid-column: 3/4;
+    grid-row: 1/2; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--3 {
+        grid-column: 1/2;
+        grid-row: 3/4; } }
+  .gallery__item--4 {
+    grid-column: 1/2;
+    grid-row: 2/3; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--4 {
+        grid-column: 1/2;
+        grid-row: 4/5; } }
+  .gallery__item--5 {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--5 {
+        grid-column: 2/3;
+        grid-row: 3/4; } }
+  .gallery__item--6 {
+    grid-column: 3/4;
+    grid-row: 2/3; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--6 {
+        grid-column: 2/3;
+        grid-row: 4/5; } }
+  .gallery__item--7 {
+    grid-column: 1/-1;
+    grid-row: 3/5;
+    overflow: hidden; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--7 {
+        grid-column: 3/6;
+        grid-row: 3/5; } }
+  .gallery__item--8 {
+    grid-column: 1/2;
+    grid-row: 5/6; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--8 {
+        grid-column: 6/7;
+        grid-row: 3/4; } }
+  .gallery__item--9 {
+    grid-column: 2/3;
+    grid-row: 5/6; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--9 {
+        grid-column: 6/7;
+        grid-row: 4/5; } }
+  .gallery__item--10 {
+    grid-column: 3/4;
+    grid-row: 5/6; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--10 {
+        grid-column: 7/8;
+        grid-row: 3/4; } }
+  .gallery__item--11 {
+    grid-column: 1/2;
+    grid-row: 6/7; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--11 {
+        grid-column: 7/8;
+        grid-row: 4/5; } }
+  .gallery__item--12 {
+    grid-column: 2/3;
+    grid-row: 6/7; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--12 {
+        grid-column: 7/8;
+        grid-row: 5/6; } }
+  @media only screen and (max-width: 75em) and (max-width: 56.25em) {
+    .gallery__item--12 {
+      grid-column: 8/9;
+      grid-row: 3/4; } }
+  .gallery__item--13 {
+    grid-column: 3/4;
+    grid-row: 6/7; }
+    @media only screen and (max-width: 75em) {
+      .gallery__item--13 {
+        grid-column: 7/8;
+        grid-row: 6/7; } }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__item--13 {
+        grid-column: 8/9;
+        grid-row: 4/5; } }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px; }
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem; }
+  .btn:link span, .btn:visited span {
+    padding-bottom: .4rem;
+    border-bottom: 1px solid #fff; }
+
+.btn--1 {
+  position: relative;
+  top: -2rem;
+  left: 5%;
+  background-color: orangered;
+  box-shadow: 0.5 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: all 1s; }
+
+.btn--1:hover {
+  left: 7%;
+  background-color: yellowgreen; }
+
 .nav {
   position: fixed;
   top: 0;
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
-  width: 95%;
-  padding: 2rem;
+  width: 80%;
+  padding: .5rem 1rem;
   background-color: rgba(0, 0, 0, 0.2); }
   .nav::after {
     content: "";
     display: block;
     clear: both; }
+  @media only screen and (max-width: 75em) {
+    .nav {
+      width: 100%; } }
   .nav__logo-box {
     float: left;
-    color: #fff;
-    width: 10rem;
-    height: 7rem; }
+    width: 9rem;
+    height: 9rem;
+    margin-top: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .nav__logo-box {
+        width: 8rem;
+        height: 8rem;
+        margin-left: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo-box {
+        width: 6rem;
+        height: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo-box {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 4rem; } }
   .nav__logo-link:link, .nav__logo-link:visited {
     text-decoration: none; }
   .nav__logo {
@@ -342,20 +771,21 @@ BELLOW MEET THE CREW HEADER
       .nav__list {
         display: block;
         position: absolute;
-        bottom: -100%;
+        bottom: -90%;
         right: 3rem; } }
   .nav__item {
     padding: 1rem;
     font-weight: 700;
     display: block;
+    background-color: rgba(255, 165, 0, 0.8);
+    border-radius: 2px;
     position: relative;
     transition: all 1s; }
     .nav__item:not(:last-child) {
       margin-right: 1rem; }
       @media only screen and (max-width: 37.5em) {
         .nav__item:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 1rem; } }
+          margin-right: 0; } }
     @media only screen and (hover: none), only screen and (max-width: 37.5em) {
       .nav__item {
         background-color: yellowgreen; } }
@@ -363,6 +793,9 @@ BELLOW MEET THE CREW HEADER
     opacity: .8;
     background-color: yellowgreen;
     transform: translateY(15%); }
+    @media only screen and (hover: none), only screen and (max-width: 37.5em) {
+      .nav__item:hover {
+        transform: translateY(0); } }
   .nav__item:before {
     content: "";
     display: block;
@@ -405,14 +838,59 @@ BELLOW MEET THE CREW HEADER
     .nav__menu-link:active, .nav__menu-link:focus {
       transform: scale(1.2); }
 
+.next__nav {
+  position: fixed;
+  bottom: -5%;
+  z-index: 1;
+  margin: 1rem;
+  transform: rotate(-60deg); }
+  .next__nav-list {
+    list-style: none; }
+  .next__nav-item {
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 30rem;
+    -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 0% 100%);
+    text-align: right; }
+    .next__nav-item--1 {
+      transform: translateX(-42%);
+      transition: transform .4s;
+      animation: nextNavFull-1 2s ease-out; }
+    .next__nav-item--2 {
+      transform: translateX(-22%);
+      transition: transform .4s;
+      animation: nextNavFull-2 2s ease-out; }
+    .next__nav-item--3 {
+      transform: translateX(-16%);
+      transition: transform .4s;
+      animation: nextNavFull-3 2s ease-out; }
+    .next__nav-item--1:hover {
+      transform: translateX(-36%); }
+    .next__nav-item--2:hover {
+      transform: translateX(-16%); }
+    .next__nav-item--3:hover {
+      transform: translateX(-10%); }
+  .next__nav-link {
+    margin: 1rem 2rem;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: right;
+    color: #fff;
+    font-size: 1.4rem; }
+
 .header {
   height: 100vh;
   backface-visibility: hidden;
-  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One-sm.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 50%;
   position: relative; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One.jpg); } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -435,6 +913,86 @@ BELLOW MEET THE CREW HEADER
     .header__arrow-icon:hover {
       transform: skew(-45deg) translateX(-20%); }
 
+.footer {
+  background-color: #eee;
+  padding: 8rem; }
+  .footer__logo-box {
+    width: 10rem;
+    margin: 0 auto;
+    padding: 2rem; }
+  .footer__logo {
+    width: 100%; }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+  .footer__navigation {
+    border-top: 1px solid #DDD;
+    padding: 2rem;
+    display: inline-block; }
+  .footer__list {
+    font-size: 1.4rem;
+    font-weight: 400;
+    list-style: none;
+    display: flex; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 2rem; }
+  .footer__link {
+    color: #fff;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #000; }
+    .footer__link:link, .footer__link:visited {
+      color: #777;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 1s;
+      box-shadow: 0 0.1rem 0.2rem rgba(238, 238, 238, 0.1);
+      transform-origin: center;
+      display: inline-block; }
+    .footer__link:hover {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      transform: rotate(5deg) scaleY(1.2);
+      background-color: inherit; }
+  .footer__copyright {
+    border-top: 1px solid #DDD;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end; }
+  .footer__paragraph {
+    padding: 2rem;
+    font-size: 1rem; }
+
 .meet {
   background-color: rgba(238, 238, 238, 0.8);
   padding: 10rem 0; }
+
+.intro {
+  position: relative; }
+
+.next {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2)), url(../img/next/One.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  /*
+  stops the page from shifting
+  */
+  backface-visibility: hidden; }
+  .next__text-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%; }
+
+.adventure {
+  background-color: orangered;
+  height: 100vh;
+  margin: 0 10rem;
+  padding: 2rem; }

@@ -722,13 +722,16 @@ BELLOW MEET THE CREW HEADER
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
-  width: 95%;
-  padding: 2rem;
+  width: 80%;
+  padding: .5rem 1rem;
   background-color: rgba(0, 0, 0, 0.2); }
   .nav::after {
     content: "";
     display: block;
     clear: both; }
+  @media only screen and (max-width: 75em) {
+    .nav {
+      width: 100%; } }
   .nav__logo-box {
     float: left;
     width: 9rem;
@@ -737,7 +740,8 @@ BELLOW MEET THE CREW HEADER
     @media only screen and (max-width: 75em) {
       .nav__logo-box {
         width: 8rem;
-        height: 8rem; } }
+        height: 8rem;
+        margin-left: 2rem; } }
     @media only screen and (max-width: 56.25em) {
       .nav__logo-box {
         width: 6rem;
@@ -767,7 +771,7 @@ BELLOW MEET THE CREW HEADER
       .nav__list {
         display: block;
         position: absolute;
-        bottom: -70%;
+        bottom: -90%;
         right: 3rem; } }
   .nav__item {
     padding: 1rem;
@@ -986,3 +990,91 @@ BELLOW MEET THE CREW HEADER
     transform: translate(-50%, -50%);
     text-align: center;
     width: 75%; }
+
+.adventure {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #9ACD32, #cc8400);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.adventure-box {
+  background-color: orangered;
+  max-width: 120rem;
+  min-height: 50rem;
+  margin: 5rem auto;
+  display: flex; }
+  @media only screen and (max-width: 75em) {
+    .adventure-box {
+      margin: 0 0;
+      max-width: 100%; } }
+  @media only screen and (max-width: 75em) {
+    .adventure-box {
+      display: block; } }
+
+.adventure-side {
+  background-color: pink;
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media only screen and (max-width: 75em) {
+    .adventure-side {
+      flex-direction: row;
+      justify-content: stretch; } }
+  .adventure-side__list {
+    font-size: 1.4rem;
+    letter-spacing: .4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 75em) {
+      .adventure-side__list {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%; } }
+  .adventure-side__item {
+    text-transform: uppercase;
+    background-color: silver;
+    position: relative;
+    text-align: center; }
+    .adventure-side__item:not(:last-child) {
+      margin-bottom: 1rem; }
+      @media only screen and (max-width: 75em) {
+        .adventure-side__item:not(:last-child) {
+          margin-bottom: 0; } }
+  .adventure-side__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /*
+      Line
+    */
+    width: 3px;
+    background-color: purple;
+    /* start from the center then increase vertically*/
+    transform: scale(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .adventure-side__item:hover::before {
+    width: 100%;
+    transform: scale(1); }
+  .adventure-side__item:active::before {
+    background-color: orange; }
+  .adventure-side__link:link, .adventure-side__link:visited {
+    text-decoration: none;
+    padding: 2rem 3rem;
+    display: block;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    cursor: pointer; }
+    @media only screen and (max-width: 25em) {
+      .adventure-side__link:link, .adventure-side__link:visited {
+        padding: 1rem 1.5rem; } }
+  .adventure-side__copyright {
+    display: flex;
+    justify-content: center; }
+    @media only screen and (max-width: 75em) {
+      .adventure-side__copyright {
+        display: none; } }
