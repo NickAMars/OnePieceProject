@@ -20,23 +20,19 @@
     // justify-content: center;
     @include respond(tab-land){
       flex-direction: row;
-      justify-content: space-around;
+      // justify-content: space-around;
       width: 100%;
     }
   }
 
   &__item{
-    text-transform: uppercase;
     background-color: silver;
-    // padding: 2rem;
-    position: relative;
-    // @include respond(tab-land){
-    //   padding: 2rem 4rem;
-    // }
-    // @media   only screen and  (max-width: $phone-medium){
-    //   padding: 1rem 2rem;
-    // }
     text-align: center;
+    position: relative;
+    @include respond(tab-land){
+        flex:1;
+    }
+
     &:not(:last-child){
       margin-bottom: 1rem;
       @include respond(tab-land){
@@ -50,16 +46,13 @@
     top:0;
     left: 0;
     height: 100%;
-    /*
-      Line
-    */
     width: 3px;
     background-color: purple;
     /* start from the center then increase vertically*/
     transform: scale(0);
     transition:
-    transform .2s,
-    width .4s cubic-bezier(1,0,0,1) .2s,
+    transform .3s,
+    width .4s cubic-bezier(1,0,0,1) .3s,
     background-color .1s;
 
   }
@@ -67,6 +60,7 @@
     width: 100%;
     transform: scale(1);
   }
+
   &__item:active::before{
     background-color: orange;
   }
@@ -74,6 +68,7 @@
   &__link:link,
   &__link:visited {
     text-decoration: none;
+    text-transform: uppercase;
     // background-color: yellowgreen;
     padding:2rem 3rem;
     display: block;
