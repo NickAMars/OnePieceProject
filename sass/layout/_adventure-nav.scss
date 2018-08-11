@@ -1,9 +1,10 @@
 .adventure-side{
-  background-color: pink;
+  // background-color: #eee;
   flex: 0 0 18%; // TAKES UP 18% OF EVERHING
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+   background-color: #ddd;
   @include respond(tab-land){
     flex-direction: row;
     justify-content: stretch;

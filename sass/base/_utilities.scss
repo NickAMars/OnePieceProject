@@ -7,7 +7,18 @@
 .img-width{
   width:100%;
 }
-
+.border-bt{
+  border-bottom: 1px solid #fff;
+}
+.tx-center{
+  text-align: center;
+}
+.ds-block{
+  display: block;
+}
+.bd-line{
+  border-bottom: 1px solid rgba(#fff, 0.4);
+}
 .mb-sm{
   margin-bottom: 2rem;
 }
@@ -59,7 +70,4 @@
 }
 .ml-hg{
   margin-left: 10rem;
-}
-.border-bt{
-  border-bottom: 1px solid #fff;
 }

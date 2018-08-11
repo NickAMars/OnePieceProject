@@ -120,6 +120,18 @@ body {
 .img-width {
   width: 100%; }
 
+.border-bt {
+  border-bottom: 1px solid #fff; }
+
+.tx-center {
+  text-align: center; }
+
+.ds-block {
+  display: block; }
+
+.bd-line {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
 .mb-sm {
   margin-bottom: 2rem; }
 
@@ -167,9 +179,6 @@ body {
 
 .ml-hg {
   margin-left: 10rem; }
-
-.border-bt {
-  border-bottom: 1px solid #fff; }
 
 @keyframes moveInLeft {
   0% {
@@ -268,8 +277,7 @@ BELLOW MEET THE CREW HEADER
     transform: rotate(30deg); }
     @media only screen and (max-width: 20.7em) {
       .meet__icon-box {
-        top: -130%;
-        right: 50%;
+        right: 4rem;
         transform: rotate(0deg); } }
   .meet__icon {
     width: 100%; }
@@ -965,6 +973,157 @@ BELLOW MEET THE CREW HEADER
     padding: 2rem;
     font-size: 1rem; }
 
+.adventure-side {
+  background-color: pink;
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media only screen and (max-width: 75em) {
+    .adventure-side {
+      flex-direction: row;
+      justify-content: stretch; } }
+  .adventure-side__list {
+    font-size: 1.4rem;
+    letter-spacing: .4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 75em) {
+      .adventure-side__list {
+        flex-direction: row;
+        width: 100%; } }
+  .adventure-side__item {
+    background-color: silver;
+    text-align: center;
+    position: relative; }
+    @media only screen and (max-width: 75em) {
+      .adventure-side__item {
+        flex: 1; } }
+    .adventure-side__item:not(:last-child) {
+      margin-bottom: 1rem; }
+      @media only screen and (max-width: 75em) {
+        .adventure-side__item:not(:last-child) {
+          margin-bottom: 0; } }
+  .adventure-side__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: purple;
+    /* start from the center then increase vertically*/
+    transform: scale(0);
+    transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.3s, background-color 0.1s; }
+  .adventure-side__item:hover::before {
+    width: 100%;
+    transform: scale(1); }
+  .adventure-side__item:active::before {
+    background-color: orange; }
+  .adventure-side__link:link, .adventure-side__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2rem 3rem;
+    display: block;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    cursor: pointer; }
+    @media only screen and (max-width: 25em) {
+      .adventure-side__link:link, .adventure-side__link:visited {
+        padding: 1rem 1.5rem; } }
+  .adventure-side__copyright {
+    display: flex;
+    justify-content: center; }
+    @media only screen and (max-width: 75em) {
+      .adventure-side__copyright {
+        display: none; } }
+
+.adv-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(6, minmax(min-content, 15rem)) minmax(10rem, 1fr);
+  grid-template-rows: minmax(10rem, 1fr) repeat(2, minmax(min-content, 15rem)) minmax(10rem, 1fr); }
+
+.adv__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: .1px solid #000; }
+
+.adv__image-box-1 {
+  grid-column: 1/span 2; }
+
+.adv__image-box-2 {
+  grid-column: 7/span 2; }
+
+.adv__image-box-3 {
+  grid-column: 1/span 2;
+  grid-row: 4/5; }
+
+.adv__image-box-4 {
+  grid-column: 7/span 2;
+  grid-row: 4/5; }
+
+.adv__content {
+  grid-column: 3/7;
+  grid-row: 1/4; }
+
+.adv__left {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  align-self: center;
+  justify-self: center; }
+
+.adv__right {
+  grid-column: 8/span 2;
+  grid-row: 2/4;
+  align-self: center;
+  justify-self: center; }
+
+.adv__btn-place {
+  grid-column: 3/7;
+  grid-row: 4/5;
+  align-self: center;
+  justify-self: center; }
+
+.adv__btn-svg {
+  width: 4rem;
+  height: 4rem; }
+
+.adv__desc {
+  padding: 2rem;
+  font-size: 1.4rem;
+  -moz-column-count: 2;
+  -moz-column-gap: 2rem;
+  -moz-column-rule: .1px solid #777;
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 1px solid #777;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-align: justify; }
+
+.adv__btn {
+  text-decoration: none;
+  color: grey;
+  padding: 1rem 4rem;
+  border: 3px solid grey;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0.2rem 0.4rem 1rem rgba(0, 0, 0, 0.3);
+  transition: all 2s; }
+
+.adv__btn:hover {
+  background-color: #fff;
+  border: 3px solid orange;
+  box-shadow: 0.5rem 0.8rem 1.4rem rgba(0, 0, 0, 0.3); }
+
 .meet {
   background-color: rgba(238, 238, 238, 0.8);
   padding: 10rem 0; }
@@ -992,7 +1151,22 @@ BELLOW MEET THE CREW HEADER
     width: 75%; }
 
 .adventure {
-  background-color: orangered;
   height: 100vh;
-  margin: 0 10rem;
-  padding: 2rem; }
+  background-image: linear-gradient(to right bottom, #9ACD32, #cc8400);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.adventure-box {
+  background-color: #fff;
+  max-width: 120rem;
+  min-height: 50rem;
+  margin: 5rem auto;
+  display: flex; }
+  @media only screen and (max-width: 75em) {
+    .adventure-box {
+      margin: 0;
+      margin-top: 10rem;
+      max-width: 100%; } }
+  @media only screen and (max-width: 75em) {
+    .adventure-box {
+      display: block; } }

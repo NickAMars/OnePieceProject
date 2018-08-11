@@ -14,8 +14,8 @@
     transform: rotate(30deg);
 
       @media   only screen and  (max-width: $small-phone){
-        top:-130%;
-        right:50%;
+        // top:-100%;
+        right:4rem;
         transform: rotate(0deg);
       }
   }
