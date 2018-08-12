@@ -24,12 +24,13 @@ $color-orange-red: #FF4500;
   --color-secondary-black:#0000cc;
 
 }
-
+$bp-lg-adv: 50em; // 800px
 $bp-medium: 43.75em; // 700px
 $phone: 37.5em;// 600px
+$bp-md-adv: 31.25em;// 500px
 $phone-medium:25em; //400px;
 $small-phone: 20.7em;//330px
-$micro: 15rem;
+$micro: 15rem; //240px
 /*
 universal reset
 */

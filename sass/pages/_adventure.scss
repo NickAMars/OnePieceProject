@@ -9,23 +9,21 @@
 
 
 .adventure-box{
-  background-color: #fff;
+  background-color: rgba(#ddd, .8);
   max-width: 120rem;
   min-height: 50rem;
   margin: 5rem auto;
   box-shadow: 0 3rem 4rem rgba(#000, .2);
+    display:flex;
   @include respond(tab-land){
     margin: 0;
     margin-top: 10rem;
     max-width:100%;
-  }
-  // @include respond(phone){
-  //   margin: 0;
-  //
-  // }
-  // padding: 2rem;
-  display:flex;
-  @include respond(tab-land){
     display: block;
+  }
+  // padding: 2rem;
+  @include respond(phone){
+    margin: 20rem 0;
+
   }
 }

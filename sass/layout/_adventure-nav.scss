@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-   background-color: #ddd;
   @include respond(tab-land){
     flex-direction: row;
     justify-content: stretch;
@@ -27,7 +26,7 @@
   }
 
   &__item{
-    background-color: silver;
+    background-color: rgba(silver, .3);
     text-align: center;
     position: relative;
     @include respond(tab-land){
@@ -48,21 +47,22 @@
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: purple;
+    background-color: orange;
     /* start from the center then increase vertically*/
+    background-size: 100%;
     transform: scale(0);
     transition:
     transform .3s,
-    width .4s cubic-bezier(1,0,0,1) .3s,
-    background-color .1s;
+    width .2s cubic-bezier(1,0,0,1),
+    background-color .2s;
 
   }
   &__item:hover::before{
-    width: 100%;
     transform: scale(1);
   }
 
   &__item:active::before{
+      width: 100%;
     background-color: orange;
   }
 
@@ -83,6 +83,9 @@
     // @media   only screen and  (max-width: $phone-medium){
     //   padding: 1rem 2rem;
     // }
+  }
+  &__link:focus{
+    outline: none;
   }
 
 

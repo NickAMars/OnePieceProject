@@ -15,7 +15,7 @@
   grid-template-rows: repeat(6, minmax(10rem, 1fr));
   grid-gap:1rem;
   @include respond(tab-land){
-    grid-template-columns: repeat(8, minmax(min-content,1fr));
+    grid-template-columns: repeat(7, minmax(min-content,1fr));
     grid-template-rows: repeat(6, minmax(10rem, 1fr));
   }
   @include respond(tab-port){
