@@ -1,0 +1,72 @@
+.about{
+    background-color: #eee;
+
+  &__container{
+    background-color: yellow;
+    margin-top: 5rem;
+  }
+
+  // goes in the layout file showing another navigation component name 'about-nav'
+  &__nav{
+    &-list{
+
+      display:flex;
+      justify-content: space-between;
+      list-style:none;
+    }
+    &-item{
+      // padding: 1.5rem 3rem;;
+      flex:1;
+      padding: 1.5rem 0;
+      text-align: center;
+      background-color: orange;
+      transition: all 2s;
+    }
+
+    &-item:hover{
+    background-color: purple;
+    }
+    &-link:link,&-link:visited{
+      text-decoration: none;
+      color: #fff;
+    }
+
+  }
+
+  // bellow this goes into a layout field which im a going to name  'about-main'
+  &__main-container{
+    // holds the image and the content of the page
+    background-color: pink;
+    display:flex;
+    min-height: 60rem;
+  }
+
+  &__image{
+    flex: 0 0 18%;
+    background: orangered;
+  }
+
+
+
+  &__content{
+  flex: 1;
+  background-color: greenyellow;
+  }
+  // container title and description
+  // each should take up ther own block
+  &__subj{
+    // margin-bottom: 2rem;
+    // text-align: center;
+    &:not(last-child){
+      margin-bottom: 2rem;
+    }
+    // holds the title  which is a header 3
+    &-title{
+      padding:1rem 2rem;
+    }
+    // describes the title
+    &-desc{
+      padding: 1rem;
+    }
+  }
+}

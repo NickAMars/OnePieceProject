@@ -1035,12 +1035,14 @@ BELLOW MEET THE CREW HEADER
         padding: 1rem 1.5rem; } }
   .adventure-side__link:focus {
     outline: none; }
-  .adventure-side__copyright {
+  .adventure-side__build {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 1rem; }
     @media only screen and (max-width: 75em) {
-      .adventure-side__copyright {
-        display: none; } }
+      .adventure-side__build {
+        display: none;
+        margin: 0rem; } }
 
 .adv-main {
   width: 100%;
@@ -1208,7 +1210,7 @@ BELLOW MEET THE CREW HEADER
     width: 75%; }
 
 .adventure {
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(to right bottom, #9ACD32, #cc8400);
   background-size: cover;
   background-repeat: no-repeat; }
@@ -1217,15 +1219,56 @@ BELLOW MEET THE CREW HEADER
   background-color: rgba(221, 221, 221, 0.8);
   max-width: 120rem;
   min-height: 50rem;
-  margin: 5rem auto;
+  margin: 8rem auto;
   box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.2);
   display: flex; }
   @media only screen and (max-width: 75em) {
     .adventure-box {
-      margin: 0;
-      margin-top: 10rem;
+      margin: 10rem auto;
+      max-width: 100%;
+      display: block; } }
+  @media only screen and (max-width: 56.25em) {
+    .adventure-box {
+      margin: 15rem auto;
       max-width: 100%;
       display: block; } }
   @media only screen and (max-width: 37.5em) {
     .adventure-box {
       margin: 20rem 0; } }
+
+.about {
+  background-color: #eee; }
+  .about__container {
+    background-color: yellow;
+    margin-top: 5rem; }
+  .about__nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none; }
+  .about__nav-item {
+    flex: 1;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: orange;
+    transition: all 2s; }
+  .about__nav-item:hover {
+    background-color: purple; }
+  .about__nav-link:link, .about__nav-link:visited {
+    text-decoration: none;
+    color: #fff; }
+  .about__main-container {
+    background-color: pink;
+    display: flex;
+    min-height: 60rem; }
+  .about__image {
+    flex: 0 0 18%;
+    background: orangered; }
+  .about__content {
+    flex: 1;
+    background-color: greenyellow; }
+  .about__subj:not(last-child) {
+    margin-bottom: 2rem; }
+  .about__subj-title {
+    padding: 1rem 2rem; }
+  .about__subj-desc {
+    padding: 1rem; }

@@ -1,7 +1,7 @@
 
 .adventure{
 
-  height:100vh;
+  min-height:100vh;
   background-image: linear-gradient(to right bottom, $color-yellow-green, $color-primary-black);
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,18 +12,21 @@
   background-color: rgba(#ddd, .8);
   max-width: 120rem;
   min-height: 50rem;
-  margin: 5rem auto;
+  margin: 8rem auto;
   box-shadow: 0 3rem 4rem rgba(#000, .2);
     display:flex;
   @include respond(tab-land){
-    margin: 0;
-    margin-top: 10rem;
+    margin: 10rem auto;
+    max-width:100%;
+    display: block;
+  }
+  @include respond(tab-port){
+    margin: 15rem auto;
     max-width:100%;
     display: block;
   }
   // padding: 2rem;
   @include respond(phone){
     margin: 20rem 0;
-
   }
 }

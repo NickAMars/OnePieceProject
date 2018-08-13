@@ -89,11 +89,13 @@
   }
 
 
-  &__copyright{
+  &__build{
     display:flex;
     justify-content: center;
+    margin-bottom: 1rem;
     @include respond(tab-land){
       display: none;
+      margin: 0rem;
     }
   }
 }
