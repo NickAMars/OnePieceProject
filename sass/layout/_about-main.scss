@@ -1,0 +1,51 @@
+.about{
+  &__main-container{
+    // holds the image and the content of the page
+    // background-color: pink;
+    display:flex;
+    min-height: 60rem;
+
+  }
+
+  &__left-content{
+    flex: 0 0 22%;
+    @include respond(tab-port){
+      display:none;
+    }
+    // display:none;
+    // background: orangered;
+    // align-self: center;
+  }
+  &__image-box{
+    margin-top: 2rem;
+    padding: 0 .5rem;
+    position: relative;
+  }
+  &__image-box:hover &__image{
+    filter: blur(3px) brightness(80%); //grayscale(20%)
+  }
+  &__image-box:hover &__name{
+    opacity: 1;
+  }
+  &__image{
+    backface-visibility: hidden;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+    border-radius: 20px;
+    transition: filter .8s ease-in;
+  }
+  &__name{
+    backface-visibility: hidden;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:0;
+    transition: opacity .8s ease-in;
+  }
+  // small description on how great oda is
+}

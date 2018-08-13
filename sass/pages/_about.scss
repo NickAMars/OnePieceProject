@@ -1,72 +1,44 @@
 .about{
     background-color: #eee;
-
   &__container{
-    background-color: yellow;
-    margin-top: 5rem;
+    background-color: #ddd;
+    margin: 5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1rem 2.5rem 5rem rgba(#000, .2);
   }
 
-  // goes in the layout file showing another navigation component name 'about-nav'
-  &__nav{
-    &-list{
-
-      display:flex;
-      justify-content: space-between;
-      list-style:none;
-    }
-    &-item{
-      // padding: 1.5rem 3rem;;
-      flex:1;
-      padding: 1.5rem 0;
-      text-align: center;
-      background-color: orange;
-      transition: all 2s;
-    }
-
-    &-item:hover{
-    background-color: purple;
-    }
-    &-link:link,&-link:visited{
-      text-decoration: none;
-      color: #fff;
-    }
-
-  }
-
-  // bellow this goes into a layout field which im a going to name  'about-main'
-  &__main-container{
-    // holds the image and the content of the page
-    background-color: pink;
-    display:flex;
-    min-height: 60rem;
-  }
-
-  &__image{
-    flex: 0 0 18%;
-    background: orangered;
-  }
 
 
 
   &__content{
-  flex: 1;
-  background-color: greenyellow;
+    border-left: 2px solid #fff;
+    flex: 1;
+    margin-top: 1rem;
+    margin-bottom:  1rem;
+    @include respond(tab-port){
+      margin-top: 0;
+      border-left: none;
+    }
+    // background-color: greenyellow;
   }
-  // container title and description
-  // each should take up ther own block
   &__subj{
-    // margin-bottom: 2rem;
-    // text-align: center;
+    padding: 0 10rem;
     &:not(last-child){
       margin-bottom: 2rem;
     }
-    // holds the title  which is a header 3
-    &-title{
-      padding:1rem 2rem;
+    @include respond(tab-port){
+    padding: 0 7rem;
     }
-    // describes the title
-    &-desc{
-      padding: 1rem;
+    @include respond(phone){
+    padding: 0 2rem;
     }
   }
+
+  &__btn-center{
+    // background-color: pink;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
 }

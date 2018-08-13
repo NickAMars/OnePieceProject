@@ -28,7 +28,7 @@ html {
   @media only screen and (max-width: 20.7em) {
     html {
       font-size: 35%; } }
-  @media only screen and (max-width: 15rem) {
+  @media only screen and (max-width: 18rem) {
     html {
       font-size: 30%; } }
 
@@ -62,8 +62,10 @@ body {
         margin-bottom: 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
-        font-size: 4.5rem;
         letter-spacing: 0; } }
+    @media only screen and (max-width: 18rem) {
+      .heading-primary--main {
+        font-size: 4.5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -78,6 +80,9 @@ body {
       .heading-primary--sub {
         letter-spacing: 0;
         font-weight: 400; } }
+    @media only screen and (max-width: 18rem) {
+      .heading-primary--sub {
+        font-size: 3.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -110,6 +115,45 @@ body {
     .heading-tertiary {
       font-size: 1.5rem;
       letter-spacing: 0; } }
+
+.heading-quaternary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  letter-spacing: .1px;
+  padding: 1rem; }
+  .heading-quaternary-1 {
+    margin-top: 1rem;
+    background-image: linear-gradient(to bottom right, #cc8400, #ffb732);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid #fff; }
+
+.title {
+  padding: 1rem 2rem;
+  display: block;
+  text-align: center;
+  font-size: 1.6rem; }
+
+.description {
+  margin: 1rem;
+  margin-bottom: 0;
+  font-size: 1.2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      font-size: 1.4rem; } }
+  .description--1 {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .description--1 {
+        padding: 1rem; } }
 
 .center-text {
   text-align: center; }
@@ -453,7 +497,7 @@ BELLOW MEET THE CREW HEADER
     grid-gap: 3rem;
     justify-content: center;
     align-content: center; }
-    @media only screen and (max-width: 15rem) {
+    @media only screen and (max-width: 18rem) {
       .intro__container {
         grid-template-rows: repeat(6, 10rem); } }
   .intro__storys {
@@ -504,7 +548,7 @@ BELLOW MEET THE CREW HEADER
       .intro__card {
         padding: .5rem;
         max-height: 21rem; } }
-    @media only screen and (max-width: 15rem) {
+    @media only screen and (max-width: 18rem) {
       .intro__card {
         padding: 0;
         max-width: 20rem; } }
@@ -1183,6 +1227,79 @@ BELLOW MEET THE CREW HEADER
   .adv__btn:hover span {
     margin-left: 1rem; }
 
+.about__nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px solid #fff; }
+
+.about__nav-item {
+  flex: 1;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: orange;
+  transition: all 2s;
+  position: relative; }
+  .about__nav-item:not(:last-child) {
+    border-right: 1px solid #fff; }
+  .about__nav-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 4px solid yellowgreen;
+    width: 0;
+    transition: all .4s ease-in; }
+  .about__nav-item:hover::before {
+    width: 100%; }
+
+.about__nav-link:link, .about__nav-link:visited {
+  text-decoration: none;
+  color: #fff; }
+
+.about__main-container {
+  display: flex;
+  min-height: 60rem; }
+
+.about__left-content {
+  flex: 0 0 22%; }
+  @media only screen and (max-width: 56.25em) {
+    .about__left-content {
+      display: none; } }
+
+.about__image-box {
+  margin-top: 2rem;
+  padding: 0 .5rem;
+  position: relative; }
+
+.about__image-box:hover .about__image {
+  filter: blur(3px) brightness(80%); }
+
+.about__image-box:hover .about__name {
+  opacity: 1; }
+
+.about__image {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  transition: filter .8s ease-in; }
+
+.about__name {
+  backface-visibility: hidden;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .8s ease-in; }
+
 .meet {
   background-color: rgba(238, 238, 238, 0.8);
   padding: 10rem 0; }
@@ -1239,36 +1356,30 @@ BELLOW MEET THE CREW HEADER
 .about {
   background-color: #eee; }
   .about__container {
-    background-color: yellow;
-    margin-top: 5rem; }
-  .about__nav-list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none; }
-  .about__nav-item {
-    flex: 1;
-    padding: 1.5rem 0;
-    text-align: center;
-    background-color: orange;
-    transition: all 2s; }
-  .about__nav-item:hover {
-    background-color: purple; }
-  .about__nav-link:link, .about__nav-link:visited {
-    text-decoration: none;
-    color: #fff; }
-  .about__main-container {
-    background-color: pink;
-    display: flex;
-    min-height: 60rem; }
-  .about__image {
-    flex: 0 0 18%;
-    background: orangered; }
+    background-color: #ddd;
+    margin: 5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1rem 2.5rem 5rem rgba(0, 0, 0, 0.2); }
   .about__content {
+    border-left: 2px solid #fff;
     flex: 1;
-    background-color: greenyellow; }
-  .about__subj:not(last-child) {
-    margin-bottom: 2rem; }
-  .about__subj-title {
-    padding: 1rem 2rem; }
-  .about__subj-desc {
-    padding: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .about__content {
+        margin-top: 0;
+        border-left: none; } }
+  .about__subj {
+    padding: 0 10rem; }
+    .about__subj:not(last-child) {
+      margin-bottom: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .about__subj {
+        padding: 0 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .about__subj {
+        padding: 0 2rem; } }
+  .about__btn-center {
+    text-align: center;
+    margin-top: 4rem; }

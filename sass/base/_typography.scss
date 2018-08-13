@@ -20,8 +20,11 @@
         margin-bottom: 1rem;
       }
       @include respond(phone){
-        font-size: 4.5rem;
+        // font-size: 5.5rem;
         letter-spacing: 0;
+      }
+      @media only screen  and  (max-width: $micro){
+        font-size: 4.5rem;
       }
     }
 
@@ -39,14 +42,16 @@
 
 
          @include respond(tab-port){
-           // font-size: 5.5rem;
            letter-spacing: .5rem;
          }
 
          @include respond(phone){
            // font-size: 4.5rem;
            letter-spacing: 0;
-               font-weight: 400;
+          font-weight: 400;
+         }
+         @media only screen  and  (max-width: $micro){
+           font-size: 3.5rem;
          }
 
     }
@@ -93,4 +98,47 @@
     font-size: 1.5rem;
     letter-spacing: 0;
     }
+}
+
+.heading-quaternary{
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display:block;
+  text-align: center;
+  letter-spacing: .1px;
+  padding: 1rem;
+  &-1{
+    margin-top: 1rem;
+    background-image: linear-gradient(to bottom right, $color-primary-black, $color-primary-light);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid #fff;
+  }
+}
+.title{
+    padding:1rem 2rem;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.description{
+  margin: 1rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  @include respond(phone){
+  font-size: 1.4rem;
+  }
+  &--1{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 2rem;
+    @include respond(phone){
+    padding: 1rem;
+    }
+  }
 }
