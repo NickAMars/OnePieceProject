@@ -10,9 +10,9 @@
   &-item{
     // padding: 1.5rem 3rem;;
     flex:1;
-    padding: 1.5rem 0;
+    // padding: 1.5rem 0;
     text-align: center;
-    background-color: orange;
+    // background-color: orange;
     transition: all 2s;
     position: relative;
 
@@ -27,17 +27,22 @@
       left: 0;
       z-index: 1;
       border-bottom:  4px solid yellowgreen;
-      width:0;
+      width:20%;
       transition: all .4s ease-in;
     }
     &:hover::before{
-      width:100%;
+      width:80%;
     }
   }
 
   &-link:link,&-link:visited{
     text-decoration: none;
     color: #fff;
+    // text-align: center;
+    // padding: 2rem;
+    background-color: orange;
+    display: block;
+    padding: 1rem 0rem;
   }
 
 

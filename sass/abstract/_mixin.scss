@@ -1,10 +1,10 @@
 // fixing  float
 @mixin clearfix{
-    &::after{
-      content: "";
-      display: block; // table
-      clear: both;
-    }
+  &::after{
+    content: "";
+    display: block; // table
+    clear: both;
+  }
 }
 // centers object to container
 @mixin ab-center{

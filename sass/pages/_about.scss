@@ -16,6 +16,7 @@
     flex: 1;
     margin-top: 1rem;
     margin-bottom:  1rem;
+    position: relative;
     @include respond(tab-port){
       margin-top: 0;
       border-left: none;
@@ -35,10 +36,6 @@
     }
   }
 
-  &__btn-center{
-    // background-color: pink;
-    text-align: center;
-    margin-top: 4rem;
-  }
+
 
 }

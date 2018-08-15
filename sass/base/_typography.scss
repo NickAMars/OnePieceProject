@@ -127,18 +127,50 @@
 }
 
 .description{
-  margin: 1rem;
-  margin-bottom: 0;
-  font-size: 1.2rem;
-  @include respond(phone){
-  font-size: 1.4rem;
-  }
-  &--1{
-    border: 1px solid #eee;
-    border-radius: 4px;
+
+  &-1{
     padding: 2rem;
-    @include respond(phone){
-    padding: 1rem;
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid #aaa;
+    hyphens: auto;
+    text-align: justify;
+    @media   only screen and  (max-width: $bp-lg-adv){
+      padding: 1rem;
+      column-count: 0;
+      column-gap: 0;
+      column-rule: none;
+      hyphens: auto;
+
     }
   }
+  &-second{
+      margin: 1rem;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      text-align: justify;
+      @include respond(phone){
+      font-size: 1.4rem;
+      }
+    &--1{
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 2rem;
+      @include respond(phone){
+      padding: 1rem;
+      }
+    }
+  }
+
+
+
 }
+
+
+// -moz-column-count: 2;
+// -moz-column-gap: 2rem;
+// -moz-column-rule: .1px solid #aaa;
+// -moz-hyphens: auto;
+// -ms-hyphens: auto;
+// -webkit-hyphens: auto;

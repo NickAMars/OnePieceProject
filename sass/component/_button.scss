@@ -27,3 +27,41 @@
   }
 
 }
+
+.adv__btn{
+
+  &-svg{
+    width: 4rem;
+    height: 4rem;
+    fill: rgba(#BBB, .7);
+    transition: fill 2s;
+  }
+  &-svg:hover{
+      fill: rgba(orange, .8);
+  }
+
+  &:link, &:visited {
+    text-decoration: none;
+    color: #999;
+    // background-color: #eee;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #999;
+    display: inline-block;
+    border-radius: 2px;
+    // box-shadow: 0 .4rem  1rem rgba(#000, .3);
+    transition: all 2s;
+    span{
+      transition: margin-left 2s;
+    }
+  }
+
+  &:hover{
+    // background-color: #eee;
+    border-bottom: 3px solid rgba(orange, .8);
+    color: orange;
+    box-shadow: 0 .8rem  1.4rem rgba(#000, .3);
+    span{
+      margin-left: 1rem;
+    }
+  }
+}

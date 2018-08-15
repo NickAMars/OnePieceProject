@@ -58,10 +58,13 @@
     grid-template-columns:  repeat(2,1fr);
     grid-gap:2rem;
     padding: 2rem;
-
+    @include respond(phone){
+      grid-gap:1rem;
+      padding: 1rem;
+    }
     @media   only screen and  (max-width: $small-phone){
     display:flex;
-    flex-direction: column;;
+    flex-direction: column;
     }
     //margin: 2rem;
   }
