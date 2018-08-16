@@ -1,11 +1,17 @@
-//alert('Hello World im home');
-
-
 $('.nav__menu-link').on('click', function(){
-  //console.log("working");
-  // $('.nav__list').fadeToggle();
   $('.nav__list').fadeToggle(1000);
 });
+
+$(window).scroll( () => {
+  let wScroll = $(this).scrollTop();
+  let body = document.querySelector('body');
+  if(wScroll > $('.meet').offset().top){
+    $('.nav').fadeOut(1000);
+  }else {
+    $('.nav').fadeIn(1000);
+  }
+});
+
 
 const sizeUpdate = ()=>{
   let width = document.documentElement.clientWidth;
