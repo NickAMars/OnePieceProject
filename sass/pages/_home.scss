@@ -1,26 +1,28 @@
 .meet{
   background-color: rgba(#EEE, 0.8); //britten(#eee, 30%);
-  padding: 30rem 0;
+  padding: 30rem 0 20rem 0;;
   // margin-top: -20%;
-  margin-top: -12%;
-  // seperate the sides from the main content
-  //margin: 0 5rem;
-//  position: relative;
-  @include respond(tab-land){
-    padding: 25rem 0;
-    // margin-top: -13%;
-  }
-  @include respond(tab-port){
-    padding: 25rem 0;
-    margin-top: -14%;
-  }
-  @include respond(phone){
-    padding: 30rem 0;
-    margin-top: -16%;
-  }
-  @media only screen and (min-width: $bp-hg){
-    padding: 20rem 0;
-    margin-top: -5%;
+  @supports (clip-path: polygon(0 0)){
+    margin-top: -12%;
+    // seperate the sides from the main content
+    //margin: 0 5rem;
+  //  position: relative;
+    @include respond(tab-land){
+      padding: 25rem 0 20rem 0;
+      // margin-top: -13%;
+    }
+    @include respond(tab-port){
+      padding: 25rem 0 20rem 0;
+      margin-top: -14%;
+    }
+    @include respond(phone){
+      padding: 30rem 0 20rem 0;
+      margin-top: -16%;
+    }
+    @media only screen and (min-width: $bp-hg){
+      padding: 20rem 0 20rem 0;
+      margin-top: -5%;
+    }
   }
 }
 
