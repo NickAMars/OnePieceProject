@@ -35,10 +35,6 @@
          letter-spacing: 1rem;
          animation: moveInRight 2s ease-out 0.75s;
          animation-fill-mode: backwards;
-         // @include respond(tab-port){
-         //   //font-size: 5rem;
-         //   letter-spacing: .4rem;
-         // }
 
 
          @include respond(tab-port){
@@ -72,11 +68,6 @@
   // font-size: 1.5rem;
   letter-spacing: 0;
   }
-  // @include respond(phone){
-  // font-size: 2.5rem;
-  // }
-  // position: relative;
-  //transform: rotate(10deg);
 }
 
 .heading-tertiary{
@@ -172,15 +163,4 @@
       }
     }
   }
-
-
-
 }
-
-
-// -moz-column-count: 2;
-// -moz-column-gap: 2rem;
-// -moz-column-rule: .1px solid #aaa;
-// -moz-hyphens: auto;
-// -ms-hyphens: auto;
-// -webkit-hyphens: auto;

@@ -23,6 +23,21 @@ $('.nav').addClass('NewClass');
 document.getElementById("myDIV");
    element.classList.add("mystyle");
 
+    create an arrow
+     &:after{
+            content: "";
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            border-top: 4rem solid #fff;
+            border-bottom: 5rem solid #fff;
+            border-top-color: rgba(#fff , 0.5);
+            border-left: 5rem solid transparent;
+            border-right: 5rem solid transparent;
+            animation: moveInBottom 1s ease-out 2s;
+            animation-fill-mode: backwards;
+     }
+
 
 
 Project might need a few more adjustments.
