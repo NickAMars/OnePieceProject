@@ -380,8 +380,8 @@ BELLOW MEET THE CREW HEADER
   .meet__card-member {
     grid-column: 1/-1;
     grid-row: 1/2;
-    justify-self: center;
     align-self: center;
+    justify-self: center;
     z-index: 2; }
   .meet__card-image {
     margin-top: -15rem;
@@ -398,8 +398,8 @@ BELLOW MEET THE CREW HEADER
   .meet__card-name {
     grid-column: 1/-1;
     grid-row: 1/2;
-    justify-self: center;
     align-self: end;
+    justify-self: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1.2rem 4rem;
     font-size: 2rem;
@@ -514,9 +514,6 @@ BELLOW MEET THE CREW HEADER
   padding: 3rem;
   /*
     Two of the stories position in the grid
-  */
-  /*
-    the vide position
   */ }
   .intro__container {
     display: grid;

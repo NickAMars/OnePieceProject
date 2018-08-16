@@ -12,9 +12,6 @@
     @include respond(tab-port){
       display:none;
     }
-    // display:none;
-    // background: orangered;
-    // align-self: center;
   }
   &__image-box{
     margin-top: 2rem;
@@ -29,10 +26,7 @@
   }
   &__image{
     backface-visibility: hidden;
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-    display:block;
+    @include fix-image;
     border-radius: 20px;
     transition: filter .8s ease-in;
   }
@@ -40,10 +34,7 @@
     backface-visibility: hidden;
     font-size: 2rem;
     color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include ab-center;
     opacity:0;
     transition: opacity .8s ease-in;
   }

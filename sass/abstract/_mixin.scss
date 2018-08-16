@@ -14,6 +14,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin flex-item-center($align: center, $justify: center){
+  align-self: $align;
+  justify-self: $justify;
+}
+
+@mixin fix-image{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
 
 // phone 600px;
 

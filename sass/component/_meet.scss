@@ -78,8 +78,7 @@
   &__card-member{
     grid-column: 1/-1;
     grid-row: 1/2;
-    justify-self: center;
-    align-self: center;
+    @include flex-item-center;
     z-index: 2;
   }
   &__card-image{
@@ -100,8 +99,7 @@
     // placement
     grid-column: 1/-1;
     grid-row: 1/2;
-    justify-self: center;
-    align-self: end;
+    @include flex-item-center(end, center);
     // surroundings
     background-color: rgba(#fff, 0.8);
     padding: 1.2rem 4rem;
