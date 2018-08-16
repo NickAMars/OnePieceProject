@@ -117,14 +117,14 @@ body {
       letter-spacing: 0; } }
 
 .heading-quaternary {
-  font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 400;
   display: block;
   text-align: center;
   letter-spacing: .1px;
   padding: 1rem; }
-  .heading-quaternary-1 {
+  .heading-quaternary--1 {
+    font-size: 1.8rem;
     margin-top: 1rem;
     background-image: linear-gradient(to bottom right, #cc8400, #ffb732);
     -webkit-background-clip: text;
@@ -133,6 +133,14 @@ body {
     width: 80%;
     margin: 0 auto;
     border-bottom: 2px solid #fff; }
+  .heading-quaternary--2 {
+    font-size: 1.6rem;
+    background-image: linear-gradient(to bottom right, #cc8400, #ffb732);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: 80%;
+    margin: 0 auto; }
 
 .title {
   padding: 1rem 2rem;
@@ -140,7 +148,7 @@ body {
   text-align: center;
   font-size: 1.6rem; }
 
-.description-1 {
+.description-first {
   padding: 2rem;
   font-size: 1.4rem;
   column-count: 2;
@@ -149,7 +157,7 @@ body {
   hyphens: auto;
   text-align: justify; }
   @media only screen and (max-width: 50em) {
-    .description-1 {
+    .description-first {
       padding: 1rem;
       column-count: 0;
       column-gap: 0;
@@ -564,7 +572,7 @@ BELLOW MEET THE CREW HEADER
     display: grid;
     grid-template-rows: min-content max-content;
     box-shadow: 2rem 4rem 8rem rgba(0, 0, 0, 0.05);
-    border: .2px solid #fff; }
+    border: .2px solid #AAA; }
     @media only screen and (max-width: 56.25em) {
       .intro__card {
         padding: .5rem;
@@ -843,12 +851,16 @@ BELLOW MEET THE CREW HEADER
 
 .list {
   list-style: none;
-  margin: 3rem 0;
-  padding: 3rem 0;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  margin-top: 1rem;
+  margin-right: -10rem;
+  padding: 2rem 0;
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 25em) {
+    .list {
+      flex-direction: column;
+      padding: 0;
+      margin-bottom: 5rem; } }
   .list__item {
     flex: 0 0 50%;
     margin-bottom: .7rem; }
@@ -878,14 +890,14 @@ BELLOW MEET THE CREW HEADER
   justify-content: space-between;
   align-items: center;
   transform: translateX(-50%);
-  width: 80%;
+  width: 100%;
   padding: .5rem 1rem;
   background-color: rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 75em) {
     .nav {
       width: 100%; } }
   .nav__logo-box {
-    margin-left: 2rem;
+    margin-left: 4rem;
     width: 6rem;
     height: 6rem; }
   .nav__logo-link:link, .nav__logo-link:visited {
@@ -895,43 +907,58 @@ BELLOW MEET THE CREW HEADER
     object-fit: cover;
     display: block;
     transition: all 2s; }
-  .nav__logo:hover {
-    width: 120%; }
+    .nav__logo:hover {
+      width: 110%; }
   .nav__list {
-    margin-right: 2rem;
+    margin-right: 4rem;
     list-style: none;
     display: flex;
     padding: 1rem; }
     @media only screen and (max-width: 37.5em) {
       .nav__list {
+        margin-right: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .nav__list {
         display: block;
         position: absolute;
-        bottom: -170%;
-        right: 3rem; } }
+        bottom: -200%;
+        right: 3rem;
+        margin-right: 0; } }
   .nav__item {
-    padding: 1rem;
-    font-weight: 700;
-    display: block;
-    background-color: rgba(255, 165, 0, 0.8);
-    border-radius: 2px;
-    position: relative;
-    transition: all 1s; }
+    margin-bottom: 1px; }
     .nav__item:not(:last-child) {
-      margin-right: 1rem; }
+      margin-right: 3rem; }
       @media only screen and (max-width: 37.5em) {
         .nav__item:not(:last-child) {
           margin-right: 0; } }
-    @media only screen and (hover: none), only screen and (max-width: 37.5em) {
-      .nav__item {
-        background-color: yellowgreen; } }
-  .nav__item:hover {
-    opacity: .8;
-    background-color: yellowgreen;
-    transform: translateY(15%); }
-    @media only screen and (hover: none), only screen and (max-width: 37.5em) {
-      .nav__item:hover {
-        transform: translateY(0); } }
-  .nav__item:before {
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    font-weight: 700;
+    position: relative;
+    transition: all 1s;
+    /*
+      for screen size without hover
+     */ }
+    @media only screen and (max-width: 37.5em) {
+      .nav__link:link, .nav__link:visited {
+        background-image: radial-gradient(#ffb732, #cc8400);
+        padding: 1.5rem 3rem; } }
+    @media only screen and (hover: none) {
+      .nav__link:link, .nav__link:visited {
+        background-image: radial-gradient(#cc8400, #ffb732); } }
+  .nav__link:focus {
+    outline: none; }
+  .nav__link:hover {
+    opacity: .8; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__link:hover {
+        background-image: radial-gradient(#cc8400, #ffb732); } }
+  .nav__link:before {
     content: "";
     display: block;
     position: absolute;
@@ -944,19 +971,15 @@ BELLOW MEET THE CREW HEADER
     opacity: 1;
     transform: scaleX(1);
     transition: all 1s; }
-  .nav__item:hover:before {
+  .nav__link:hover:before {
     opacity: 0;
     transform: scaleX(0); }
-  .nav__link:link, .nav__link:visited {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.4rem; }
   .nav__menu-icon {
     width: 4rem;
     height: 4rem;
     fill: #fff; }
   .nav__menu-link {
-    margin-right: 2rem;
+    margin-right: 4rem;
     display: none;
     background-color: transparent;
     cursor: pointer;
@@ -1014,7 +1037,7 @@ BELLOW MEET THE CREW HEADER
     font-size: 1.4rem; }
 
 .header {
-  height: 100vh;
+  height: 90vh;
   backface-visibility: hidden;
   background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One-sm.jpg);
   background-size: cover;
@@ -1024,6 +1047,16 @@ BELLOW MEET THE CREW HEADER
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.4), rgba(204, 132, 0, 0.4)), url(../img/One.jpg); } }
+  @supports (clip-path: polygon(0 0)) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 80% 100%, 20% 100%, 0 90%); }
+      @media only screen and (max-width: 37.5em) {
+        .header {
+          clip-path: polygon(0 0, 100% 0, 100% 95%, 80% 100%, 20% 100%, 0 95%); } }
+      @media only screen and (min-width: 112.5em) {
+        .header {
+          clip-path: polygon(0 0, 100% 0, 100% 95%, 80% 100%, 20% 100%, 0 95%);
+          margin-top: 0; } } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -1329,7 +1362,23 @@ BELLOW MEET THE CREW HEADER
 
 .meet {
   background-color: rgba(238, 238, 238, 0.8);
-  padding: 10rem 0; }
+  padding: 30rem 0;
+  margin-top: -12%; }
+  @media only screen and (max-width: 75em) {
+    .meet {
+      padding: 25rem 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .meet {
+      padding: 25rem 0;
+      margin-top: -14%; } }
+  @media only screen and (max-width: 37.5em) {
+    .meet {
+      padding: 30rem 0;
+      margin-top: -16%; } }
+  @media only screen and (min-width: 112.5em) {
+    .meet {
+      padding: 20rem 0;
+      margin-top: -5%; } }
 
 .intro {
   position: relative; }

@@ -101,14 +101,15 @@
 }
 
 .heading-quaternary{
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 400;
   display:block;
   text-align: center;
   letter-spacing: .1px;
   padding: 1rem;
-  &-1{
+  &--1{
+    font-size: 1.8rem;
     margin-top: 1rem;
     background-image: linear-gradient(to bottom right, $color-primary-black, $color-primary-light);
     -webkit-background-clip: text;
@@ -117,6 +118,15 @@
     width: 80%;
     margin: 0 auto;
     border-bottom: 2px solid #fff;
+  }
+  &--2{
+    font-size: 1.6rem;
+    background-image: linear-gradient(to bottom right, $color-primary-black, $color-primary-light);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 .title{
@@ -128,7 +138,7 @@
 
 .description{
 
-  &-1{
+  &-first{
     padding: 2rem;
     font-size: 1.4rem;
     column-count: 2;

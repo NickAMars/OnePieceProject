@@ -8,7 +8,8 @@
   align-items: center;
   // center the navigation bar according to its position
   transform: translateX(-50%);
-  width: 80%;
+  // width: 80%;
+  width: 100%;
   // margin: 0 auto;
   padding: .5rem 1rem;
   background-color: rgba(#000, .2);
@@ -18,7 +19,7 @@
     width: 100%;
   }
   &__logo-box{
-    margin-left: 2rem;
+    margin-left: 4rem;
     width:6rem;
     height:6rem;
   }
@@ -36,67 +37,83 @@
     display: block;
     // animation: pulsate 1s 8;
     transition: all 2s;
-  }
-  &__logo:hover{
-    width: 120%;
-    //transform: skew(2.3);
+    &:hover{
+      width: 110%;
+      // transform: skew(2.3);
+    }
   }
 
   &__list{
-    margin-right: 2rem;
+    margin-right: 4rem;
     list-style: none;
-    // float: right;
     display:flex;
     // place at same padding as the left float
     padding: 1rem;
     // background-color: violet;
+    @include respond(phone){
+        margin-right: 0;
+    }
 
     @include respond(phone){
-        display: block;
-       //background-color: yellowgreen;
+       display: block;
        position: absolute;
-       bottom: -170%;
+
+       bottom: -200%;
        right:3rem;
-       //margin-top:5rem;
-      // margin-left: 5rem;
+       margin-right: 0;
     }
   }
   &__item{
-    // individual padding
-    padding: 1rem;
-    font-weight: 700;
-    display:block;
-    background-color: rgba($color-primary, .8);
-    border-radius: 2px;
-
-  // seperate from each other
     &:not(:last-child){
-      margin-right: 1rem;
+      margin-right: 3rem;
       @include respond(phone){
           margin-right: 0;
-
       }
     }
-    position:relative;
-    transition: all 1s;
+  margin-bottom:1px;
 
 // works when there is no hover
-      @media  only screen and (hover:none), only screen and  (max-width: $phone) {
-        background-color: yellowgreen;
-      }
+      // @media  only screen and (hover:none), only screen and  (max-width: $phone) {
+      //   // background-color: yellowgreen;
+      // }
 
 
   }
-  &__item:hover{
+
+  &__link:link,
+  &__link:visited{
+    text-decoration: none;
+    display:block;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    font-weight: 700;
+    position:relative;
+    transition: all 1s;
+    @include respond(phone){
+      background-image: radial-gradient($color-primary-light, $color-primary-black);
+      padding: 1.5rem 3rem;
+     }
+     /*
+      for screen size without hover
+     */
+     @media  only screen and (hover:none){
+       background-image: radial-gradient($color-primary-black, $color-primary-light);
+     }
+  }
+  &__link:focus{
+    outline:none;
+  }
+  &__link:hover{
     opacity: .8;
-    background-color: yellowgreen;
-    transform: translateY(15%);
-    @media  only screen and (hover:none), only screen and  (max-width: $phone) {
-      transform: translateY(0);
-    }
+    // transform: translateY(15%);
+    @include respond(phone){
+       background-image: radial-gradient($color-primary-black, $color-primary-light);
+     }
   }
 
-  &__item:before{
+  &__link:before{
     // content and display block are definately needed
     content: "";
     display: block;
@@ -113,7 +130,7 @@
     transition: all 1s;
     // z-index: 10;
   }
-  &__item:hover:before{
+  &__link:hover:before{
     opacity: 0;
     transform: scaleX(0);
     // z-index: 1;
@@ -121,12 +138,6 @@
     // transform-origin: center;
   }
 
-  &__link:link,
-  &__link:visited{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.4rem;
-  }
 
   &__menu-icon{
     width: 4rem;
@@ -136,7 +147,7 @@
     // only show menu bar on phone screen
   }
   &__menu-link{
-    margin-right: 2rem;
+    margin-right: 4rem;
     display:none;
     background-color: transparent;
     cursor: pointer;
@@ -145,9 +156,6 @@
     transition: all 1s;
     @include respond(phone){
         display:block;
-        // float:right;
-        // margin-top: 2rem;
-        // margin-right:1rem;
     }
     &:hover{
       transform: scale(1.5);

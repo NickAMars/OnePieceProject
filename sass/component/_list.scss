@@ -1,11 +1,17 @@
 .list{
   list-style:none;
-  margin: 3rem 0;
-  padding: 3rem 0;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  margin-top: 1rem ;
+  margin-right: -10rem;
+  padding: 2rem 0;
   display:flex;
   flex-wrap: wrap;
+
+  @media   only screen and  (max-width: $phone-medium){
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+
 
   &__item{
     flex: 0 0 50%;

@@ -1,9 +1,6 @@
 .header{
-  height: 100vh;
+  height: 90vh;
   backface-visibility: hidden;
-  // width: 100%;
-  // width: 100vw;
-
   background-image:
    linear-gradient(
    to right bottom,
@@ -13,6 +10,8 @@
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 20% 50%;
+
+   // clip-path: polygon(0 0, 100% 0, 100% 90% , 80% 100%, 20% 100%, 0 90%);
    position: relative;
 
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
@@ -24,9 +23,17 @@
              rgba($color-primary-black,.4))
              , url(../img/One.jpg);
           }
+  @supports (clip-path: polygon(0 0)){
+    clip-path: polygon(0 0, 100% 0, 100% 90% , 80% 100%, 20% 100%, 0 90%);
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 95% , 80% 100%, 20% 100%, 0 95%);
+    }
+    @media only screen and (min-width: $bp-hg){
+      clip-path: polygon(0 0, 100% 0, 100% 95% , 80% 100%, 20% 100%, 0 95%);
+      margin-top: 0;
+    }
+  }
    &__text-box{
-     // background-color: #fff;
-     //width: 40%;
      position:absolute;
      top: 50%;
      left: 50%;
