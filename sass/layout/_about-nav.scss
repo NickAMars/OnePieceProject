@@ -8,11 +8,8 @@
     border-bottom: 1px solid #fff;
   }
   &-item{
-    // padding: 1.5rem 3rem;;
     flex:1;
-    // padding: 1.5rem 0;
     text-align: center;
-    // background-color: orange;
     transition: all 2s;
     position: relative;
 
@@ -38,8 +35,6 @@
   &-link:link,&-link:visited{
     text-decoration: none;
     color: #fff;
-    // text-align: center;
-    // padding: 2rem;
     background-color: orange;
     display: block;
     padding: 1rem 0rem;

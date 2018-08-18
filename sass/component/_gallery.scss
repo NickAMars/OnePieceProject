@@ -7,9 +7,6 @@
     grid-column: 1/-1;
     grid-row: 1/-1;
   }
-  // background-color: orangered;
-  // &__image-1{
-  // }
   display: grid;
   grid-template-columns: repeat(3, minmax(10rem, 1fr));
   grid-template-rows: repeat(6, minmax(10rem, 1fr));
@@ -30,11 +27,6 @@
     &--1{
       grid-column: 1/2;
       grid-row:  1/2;
-      // @include respond(tab-land){
-      //   //display:none
-      //   grid-column: 1/2;
-      //   grid-row: 3/4;
-      // }
       @include respond(tab-port){
         display:none;
       }
@@ -91,9 +83,6 @@
         grid-column: 3/6;
         grid-row: 3/5;
       }
-      // justify-self: center;
-      // align-content: center;
-      // background-color: yellow;
     }
 
 
@@ -121,9 +110,6 @@
         grid-row: 3/4;
       }
 
-      // @include respond(tab-port){
-      //   display:none;
-      // }
     }
     &--11{
       grid-column: 1/2;
@@ -132,18 +118,13 @@
         grid-column: 7/8;
         grid-row: 4/5;
       }
-
-      // @include respond(tab-port){
-      //   display:none;
-      // }
     }
     &--12{
-      grid-column: 2/3;
-      grid-row:  6/7;
-      @include respond(tab-land){
-        grid-column: 7/8;
-        grid-row: 5/6;
-        // display:none;
+        grid-column: 2/3;
+        grid-row:  6/7;
+        @include respond(tab-land){
+          grid-column: 7/8;
+          grid-row: 5/6;
         @include respond(tab-port){
           grid-column: 8/9;
           grid-row: 3/4;
@@ -165,11 +146,11 @@
     }
   }
   &__img{
-  width: 100%;
-  height:100%;
-  object-fit: cover;
-  display:block;
-  border-radius: 5px;
-}
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+    border-radius: 5px;
+  }
 
 }

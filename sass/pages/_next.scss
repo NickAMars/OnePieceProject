@@ -1,13 +1,12 @@
 .next{
   height: 100vh;
-  // width: 100%;
   background: linear-gradient(to bottom, rgba(#000, .5), rgba(#fff, .2)), url(../img/next/One.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   /*
-  stops the page from shifting
+    stops the page from shifting
   */
   backface-visibility: hidden;
   &__text-box{

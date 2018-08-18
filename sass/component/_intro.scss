@@ -35,7 +35,6 @@ padding: 3rem;
         grid-column: 1/-1;
       }
       @include respond(phone){
-      //  grid-column: 1/-1;
       grid-row: 1/4;
       }
     }
@@ -69,14 +68,12 @@ padding: 3rem;
 
     @media   only screen and  (max-width: $micro){
       padding: 0;
-      // gave it a with just because i dont want the user go to the minimum with
       max-width: 20rem ;
     }
     display: grid;
     grid-template-rows: min-content max-content;
     box-shadow: 2rem 4rem 8rem rgba(#000, .05);
     border: .2px solid #AAA;
-    // grid-template-columns: min-content max-content;
     &--1{
        transform: skewX(7deg);
        grid-template-columns: min-content  1fr;
@@ -101,10 +98,7 @@ padding: 3rem;
     }
   }
   &__image-box{
-    // background-color: pink;
     @include flex-item-center;
-    // grid-column: 1/2;
-
     &--1{
       grid-column: 1/2;
       grid-row: 1/-1;

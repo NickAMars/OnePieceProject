@@ -1,18 +1,4 @@
 
-$color-primary: #FFA500;
-$color-primary-light: #ffb732;
-$color-primary-black: #cc8400 ;
-
-$color-secondary: #0000FF;
-$color-secondary-light:#3232ff;
-$color-secondary-black:#0000cc;
-
-$color-tertiary: #FADA5E;
-$color-tertiary-light: #ffff00;
-$color-tertiary-black: #cccc00;
-
-$color-yellow-green:#9ACD32;
-$color-orange-red: #FF4500;
 
 :root{
 
@@ -24,14 +10,6 @@ $color-orange-red: #FF4500;
   --color-secondary-black:#0000cc;
 
 }
-$bp-hg: 112.5em;
-$bp-lg-adv: 50em; // 800px
-$bp-medium: 43.75em; // 700px
-$phone: 37.5em;// 600px
-$bp-md-adv: 31.25em;// 500px
-$phone-medium:25em; //400px;
-$small-phone: 20.7em;//330px
-$micro: 18rem; //288px was 240px
 /*
 universal reset
 */
@@ -65,7 +43,6 @@ html{
 
 body{
   font-family: 'Merienda', cursive;
-  // background-color:pink;
 }
 
 ::selection{
@@ -76,7 +53,3 @@ body{
   color: #000;
   background-color: #fff;
 }
-//normal media query with breakpoint
-// @media only screen and (max-width: $bp-large){
-//   font-size: 50%;
-// }

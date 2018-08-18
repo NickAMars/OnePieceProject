@@ -1,17 +1,15 @@
 .heading-primary{
     color: #fff;
-      // backface-visibility: hidden;
-      text-transform: uppercase;
+    text-transform: uppercase;
     &--main{
+      backface-visibility: hidden;
       display: block;
       font-size: 6rem;
       font-weight: 700;
       letter-spacing: 2.5rem;
       animation: moveInLeft 1s ease-out;
       @include respond(tab-land){
-        // font-size: 5.5rem;
         letter-spacing: 1.5rem;
-        // margin-bottom: 1rem;
       }
 
       @include respond(tab-port){
@@ -20,7 +18,6 @@
         margin-bottom: 1rem;
       }
       @include respond(phone){
-        // font-size: 5.5rem;
         letter-spacing: 0;
       }
       @media only screen  and  (max-width: $micro){
@@ -29,6 +26,7 @@
     }
 
     &--sub{
+      backface-visibility: hidden;
          display: block;
          font-size: 2rem;
          font-weight: 400;
@@ -42,7 +40,6 @@
          }
 
          @include respond(phone){
-           // font-size: 4.5rem;
            letter-spacing: 0;
           font-weight: 400;
          }

@@ -38,6 +38,4 @@ document.getElementById("myDIV");
             animation-fill-mode: backwards;
      }
 
-
-
-Project might need a few more adjustments.
+Completed!

@@ -1,7 +1,5 @@
 .about{
   &__main-container{
-    // holds the image and the content of the page
-    // background-color: pink;
     display:flex;
     min-height: 60rem;
 
@@ -19,7 +17,7 @@
     position: relative;
   }
   &__image-box:hover &__image{
-    filter: blur(3px) brightness(80%); //grayscale(20%)
+    filter: blur(3px) brightness(80%); 
   }
   &__image-box:hover &__name{
     opacity: 1;

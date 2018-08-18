@@ -1,37 +1,24 @@
+%video{
+  height: 100%;
+  width: 100%;
+}
+.video{
+  @extend %video;
+  &__content{
+   @include fix-image;
+  }
+}
 .bg-video{
-  // this should take it out of its natural flow
    position: absolute;
    top: 0;
    left: 0;
-// if i put the height it doesnt show
-  height: 100%;
+  @extend %video;
 
-  width: 100%;
   z-index: -1;
   opacity: .3;
   overflow: hidden;
 
-  // stop overflowing
   &__content{
-    width:100%;
-    height:100%;
-    // simular to background size cover
-    object-fit: cover;
-    /*
-        the vide seems to not maintain its height aspect good
-        so it extends out of its frame which would would
-        cover the photos of the top and bottom section,
-        while moving away from its control system
-    */
-  }
-}
-.video{
-  height: 100%;
-  width: 100%;
-  // overflow: hidden;
-  &__content{
-    width:100%;
-    height:100%;
-    object-fit: cover;
+   @include fix-image;
   }
 }

@@ -23,10 +23,10 @@
     height: 1.2rem;
     width: 1.2rem;
     margin-right: .7rem;
-    // background-color: pink;
+
     background-image: url(../img/SVG/checkmark.svg);
     background-size: cover;
-    // add color
+    //MASK
     @supports (-webkit-mask-image: url()) or (mask-image: url()){
      background-color: var(--color-primary);
      -webkit-mask-image: url(../img/SVG/checkmark.svg);

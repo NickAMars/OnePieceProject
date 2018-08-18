@@ -1,8 +1,8 @@
 .meet{
 
   /*
-&__icon-box holds the HAT IMAGE
-&__icon- is the HAT
+    &__icon-box holds the HAT IMAGE
+    &__icon- is the HAT
 
   */
   // icon top of the secondary header
@@ -22,25 +22,16 @@
   &__icon{
     width: 100%;
   }
-
-
   &__container{
-    // background-color: pink;
-
     display: grid;
 
     //divide the into different sections
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 
     // space all around
-  //  grid-gap: 3rem;
     grid-column-gap: 6rem;
     grid-row-gap: 12rem;
     padding: 6rem;
-    // @include respond(tab-port){
-    //   padding: 4rem;
-    //   grid-column-gap: 4rem;
-    // }
 
     @media   only screen and  (max-width: $bp-medium){
        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

@@ -47,6 +47,7 @@ body {
   color: #fff;
   text-transform: uppercase; }
   .heading-primary--main {
+    backface-visibility: hidden;
     display: block;
     font-size: 6rem;
     font-weight: 700;
@@ -67,6 +68,7 @@ body {
       .heading-primary--main {
         font-size: 4.5rem; } }
   .heading-primary--sub {
+    backface-visibility: hidden;
     display: block;
     font-size: 2rem;
     font-weight: 400;
@@ -309,8 +311,8 @@ body {
 
 .meet {
   /*
-&__icon-box holds the HAT IMAGE
-&__icon- is the HAT
+    &__icon-box holds the HAT IMAGE
+    &__icon- is the HAT
 
   */
   /*
@@ -482,12 +484,20 @@ BELLOW MEET THE CREW HEADER
       color: #777;
       font-size: 1.4rem; }
 
+.video, .bg-video {
+  height: 100%;
+  width: 100%; }
+
+.video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; }
+
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
   z-index: -1;
   opacity: .3;
   overflow: hidden; }
@@ -495,20 +505,7 @@ BELLOW MEET THE CREW HEADER
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /*
-        the vide seems to not maintain its height aspect good
-        so it extends out of its frame which would would
-        cover the photos of the top and bottom section,
-        while moving away from its control system
-    */ }
-
-.video {
-  height: 100%;
-  width: 100%; }
-  .video__content {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    display: block; }
 
 .intro {
   padding: 3rem;
@@ -950,11 +947,9 @@ BELLOW MEET THE CREW HEADER
         background-image: radial-gradient(#cc8400, #ffb732); } }
   .nav__link:focus {
     outline: none; }
-  .nav__link:hover {
-    opacity: .8; }
-    @media only screen and (max-width: 37.5em) {
-      .nav__link:hover {
-        background-image: radial-gradient(#cc8400, #ffb732); } }
+  @media only screen and (max-width: 37.5em) {
+    .nav__link:hover {
+      background-image: radial-gradient(#cc8400, #ffb732); } }
   .nav__link:before {
     content: "";
     display: block;
@@ -1001,10 +996,8 @@ BELLOW MEET THE CREW HEADER
   .next__nav-item {
     margin: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
-    width: 30rem;
     -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 0% 100%);
-    text-align: right; }
+    clip-path: polygon(0% 0%, 80% 0%, 100% 25%, 100% 75%, 80% 100%, 0% 100%); }
     .next__nav-item--1 {
       transform: translateX(-42%);
       transition: transform .4s;
@@ -1023,14 +1016,17 @@ BELLOW MEET THE CREW HEADER
       transform: translateX(-16%); }
     .next__nav-item--3:hover {
       transform: translateX(-10%); }
-  .next__nav-link {
+  .next__nav-link:link, .next__nav-link:visited {
     margin: 1rem 2rem;
     display: inline-block;
     text-decoration: none;
+    width: 30rem;
     padding: 1rem 2rem;
     text-align: right;
     color: #fff;
     font-size: 1.4rem; }
+  .next__nav-link:focus {
+    outline: none; }
 
 .header {
   height: 90vh;
@@ -1389,7 +1385,7 @@ BELLOW MEET THE CREW HEADER
   background-repeat: no-repeat;
   position: relative;
   /*
-  stops the page from shifting
+    stops the page from shifting
   */
   backface-visibility: hidden; }
   .next__text-box {
