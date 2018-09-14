@@ -27,4 +27,4 @@ const sizeUpdate = ()=>{
 */
 window.addEventListener('resize',sizeUpdate);
 
-//testing 
+//testing config variable set for git
