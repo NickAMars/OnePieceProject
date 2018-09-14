@@ -26,3 +26,4 @@ const sizeUpdate = ()=>{
   triggers an event if the screen size change
 */
 window.addEventListener('resize',sizeUpdate);
+// small comment
